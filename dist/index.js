@@ -20,6 +20,7 @@ const auth_routes_1 = __importDefault(require("./routes/auth.routes"));
 const cookie_session_1 = __importDefault(require("cookie-session"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const mongodb_db_1 = require("./repository/mongodb.db");
+const winston_1 = __importDefault(require("winston"));
 var FacebookStrategy = require("passport-facebook").Strategy;
 dotenv_1.default.config();
 const app = (0, express_1.default)();
@@ -66,17 +67,22 @@ passport_1.default.serializeUser(function (user, cb) {
 });
 passport_1.default.deserializeUser((profile, done) => __awaiter(void 0, void 0, void 0, function* () {
     const userProfile = Object.assign({}, profile[0]);
-    const client = (0, mongodb_db_1.getClient)();
-    yield client.connect();
-    const user = yield client
-        .db("monitoringLinks")
-        .collection("users")
-        .findOne({ id: userProfile.id });
-    if (user) {
-        done(null, user);
+    try {
+        const client = (0, mongodb_db_1.getClient)();
+        yield client.connect();
+        const user = yield client
+            .db("monitoringLinks")
+            .collection("users")
+            .findOne({ id: userProfile.id });
+        if (user) {
+            done(null, user);
+        }
+        else {
+            done(new Error("Failed to deserialize an user"));
+        }
     }
-    else {
-        done(new Error("Failed to deserialize an user"));
+    catch (err) {
+        throw new Error(err);
     }
 }));
 passport_1.default.use(new FacebookStrategy({
@@ -87,27 +93,57 @@ passport_1.default.use(new FacebookStrategy({
 }, function (accessToken, refreshToken, profile, done) {
     return __awaiter(this, void 0, void 0, function* () {
         // find current user in UserModel
-        const client = (0, mongodb_db_1.getClient)();
-        yield client.connect();
-        const currentUser = yield client
-            .db("monitoringLinks")
-            .collection("users")
-            .find({})
-            .toArray();
-        if (currentUser.length === 0) {
-            const newUser = yield client
+        try {
+            const client = (0, mongodb_db_1.getClient)();
+            yield client.connect();
+            const currentUser = yield client
                 .db("monitoringLinks")
                 .collection("users")
-                .insertOne(profile._json);
-            if (newUser) {
-                done(null, newUser);
+                .find({})
+                .toArray();
+            if (currentUser.length === 0) {
+                const newUser = yield client
+                    .db("monitoringLinks")
+                    .collection("users")
+                    .insertOne(profile._json);
+                if (newUser) {
+                    done(null, newUser);
+                }
             }
+            done(null, currentUser);
         }
-        done(null, currentUser);
+        catch (err) {
+            console.log("err", err);
+            throw new Error(err);
+        }
     });
 }));
 app.get("/", (_req, res) => {
-    res.send("Express + Typescript Server");
+    res.send("Monitoring Links Api");
+});
+// winston
+const { combine, timestamp, label, printf } = winston_1.default.format;
+const myFormat = printf(({ level, message, label, timestamp }) => {
+    return `${timestamp} [${label}] ${level} ${message}`;
+});
+global.logger = winston_1.default.createLogger({
+    level: "silly",
+    transports: [
+        new winston_1.default.transports.Console(),
+        new winston_1.default.transports.File({ filename: "monitoring-api.log" }),
+    ],
+    format: combine(label({ label: "monitoring-api" }), timestamp(), myFormat),
+});
+// error log
+app.use((err, req, res, next) => {
+    if (err.message) {
+        logger.error(`${req.method} ${req.baseUrl} - ${err.message}`);
+        res.status(400).send({ error: err.message });
+    }
+    else {
+        logger.error(`${req.method} ${req.baseUrl} - ${err}`);
+        res.status(400).send({ error: err });
+    }
 });
 app.listen(port, () => {
     console.log(`[server]: Server is running at http://localhost:${port}`);
