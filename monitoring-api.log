@@ -1,0 +1,2 @@
+2022-11-01T20:53:46.742Z [monitoring-api] error GET  - Method GET; URL /auth; Error msg: This authorization code has been used.
+2022-11-01T20:57:37.786Z [monitoring-api] error GET  - Method GET; URL /auth; Error msg: This authorization code has been used.
