@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import passport from "passport";
 import cors from "cors";
 import authRoutes from "./routes/auth.routes";
+import urlRoutes from "./routes/urls.routes";
 import { NextFunction } from "express-serve-static-core";
 import cookieSession from "cookie-session";
 import cookieParser from "cookie-parser";
@@ -55,7 +56,9 @@ app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
 
+// routes
 app.use("/auth", authRoutes);
+app.use("/urls", urlRoutes);
 
 const authCheck = (req: Request, res: Response, next: NextFunction) => {
   if (!req.user) {
