@@ -1,6 +1,5 @@
 import express, { NextFunction, Request, Response } from "express";
 import passport from "passport";
-const CLIENT_HOME_PAGE_URL = "http://localhost:3000";
 
 const router = express.Router();
 
@@ -33,7 +32,7 @@ router.get("/facebook/logout", function (req, res, next) {
         return next(err);
       }
     });
-    res.redirect(CLIENT_HOME_PAGE_URL + "/logout");
+    res.redirect(process.env.CLIENT_URL + "/logout");
   } catch (err) {
     next(err);
   }
