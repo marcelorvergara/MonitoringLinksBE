@@ -86,8 +86,8 @@ passport.serializeUser(function (user, cb) {
 
 passport.deserializeUser(async (profile: IUser[], done) => {
   const userProfile = { ...profile[0] };
+  const client = getClient();
   try {
-    const client = getClient();
     await client.connect();
     const user = await client
       .db("monitoringLinks")
@@ -98,8 +98,10 @@ passport.deserializeUser(async (profile: IUser[], done) => {
     } else {
       done(new Error("Failed to deserialize an user"));
     }
-  } catch (err: any) {
-    throw new Error(err);
+  } catch (err) {
+    throw err;
+  } finally {
+    client.close();
   }
 });
 
@@ -118,8 +120,8 @@ passport.use(
       done: (arg0: any, arg1: any) => any
     ) {
       // find current user in UserModel
+      const client = getClient();
       try {
-        const client = getClient();
         await client.connect();
         const currentUser = await client
           .db("monitoringLinks")
@@ -139,6 +141,8 @@ passport.use(
       } catch (err: any) {
         console.log("err", err);
         throw new Error(err);
+      } finally {
+        client.close();
       }
     }
   )
