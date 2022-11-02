@@ -5,7 +5,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const passport_1 = __importDefault(require("passport"));
-const CLIENT_HOME_PAGE_URL = "http://localhost:3000";
 const router = express_1.default.Router();
 router.get("/login/success", (req, res) => {
     if (req.user) {
@@ -35,7 +34,7 @@ router.get("/facebook/logout", function (req, res, next) {
                 return next(err);
             }
         });
-        res.redirect(CLIENT_HOME_PAGE_URL + "/logout");
+        res.redirect(process.env.CLIENT_URL + "/logout");
     }
     catch (err) {
         next(err);
