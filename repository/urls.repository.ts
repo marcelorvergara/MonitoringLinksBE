@@ -15,6 +15,19 @@ async function createUrlMonitor(url: IUrl) {
   }
 }
 
+async function getUrlMonitors() {
+  const conn = await connect();
+  try {
+    const res = await conn.query("Select * from urls");
+    return res.rows;
+  } catch (err) {
+    throw err;
+  } finally {
+    conn.release();
+  }
+}
+
 export default {
   createUrlMonitor,
+  getUrlMonitors,
 };

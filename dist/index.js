@@ -1,13 +1,4 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -22,11 +13,14 @@ const cookie_session_1 = __importDefault(require("cookie-session"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const mongodb_db_1 = require("./repository/mongodb.db");
 const winston_1 = __importDefault(require("winston"));
+const checkUrl_service_1 = __importDefault(require("./services/checkUrl.service"));
 var FacebookStrategy = require("passport-facebook").Strategy;
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 const port = process.env.PORT;
+// starting cron job
+(0, checkUrl_service_1.default)();
 // set up cors to allow us to accept requests from our client
 app.use((0, cors_1.default)({
     origin: process.env.CLIENT_URL,
@@ -67,12 +61,12 @@ app.get("/", authCheck, (req, res) => {
 passport_1.default.serializeUser(function (user, cb) {
     cb(null, user);
 });
-passport_1.default.deserializeUser((profile, done) => __awaiter(void 0, void 0, void 0, function* () {
+passport_1.default.deserializeUser(async (profile, done) => {
     const userProfile = Object.assign({}, profile[0]);
+    const client = (0, mongodb_db_1.getClient)();
     try {
-        const client = (0, mongodb_db_1.getClient)();
-        yield client.connect();
-        const user = yield client
+        await client.connect();
+        const user = await client
             .db("monitoringLinks")
             .collection("users")
             .findOne({ id: userProfile.id });
@@ -84,41 +78,45 @@ passport_1.default.deserializeUser((profile, done) => __awaiter(void 0, void 0, 
         }
     }
     catch (err) {
-        throw new Error(err);
+        throw err;
     }
-}));
+    finally {
+        client.close();
+    }
+});
 passport_1.default.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
     callbackURL: "/auth/facebook/redirect",
     profileFields: ["id", "displayName", "photos", "email"],
-}, function (accessToken, refreshToken, profile, done) {
-    return __awaiter(this, void 0, void 0, function* () {
-        // find current user in UserModel
-        try {
-            const client = (0, mongodb_db_1.getClient)();
-            yield client.connect();
-            const currentUser = yield client
+}, async function (accessToken, refreshToken, profile, done) {
+    // find current user in UserModel
+    const client = (0, mongodb_db_1.getClient)();
+    try {
+        await client.connect();
+        const currentUser = await client
+            .db("monitoringLinks")
+            .collection("users")
+            .find({})
+            .toArray();
+        if (currentUser.length === 0) {
+            const newUser = await client
                 .db("monitoringLinks")
                 .collection("users")
-                .find({})
-                .toArray();
-            if (currentUser.length === 0) {
-                const newUser = yield client
-                    .db("monitoringLinks")
-                    .collection("users")
-                    .insertOne(profile._json);
-                if (newUser) {
-                    done(null, newUser);
-                }
+                .insertOne(profile._json);
+            if (newUser) {
+                done(null, newUser);
             }
-            done(null, currentUser);
         }
-        catch (err) {
-            console.log("err", err);
-            throw new Error(err);
-        }
-    });
+        done(null, currentUser);
+    }
+    catch (err) {
+        console.log("err", err);
+        throw new Error(err);
+    }
+    finally {
+        client.close();
+    }
 }));
 app.get("/", (_req, res) => {
     res.send("Monitoring Links Api");

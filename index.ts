@@ -9,6 +9,7 @@ import cookieSession from "cookie-session";
 import cookieParser from "cookie-parser";
 import { getClient } from "./repository/mongodb.db";
 import winston from "winston";
+import startCron from "./services/checkUrl.service";
 var FacebookStrategy = require("passport-facebook").Strategy;
 
 interface IProfile {
@@ -32,6 +33,9 @@ dotenv.config();
 const app: Express = express();
 app.use(express.json());
 const port = process.env.PORT;
+
+// starting cron job
+startCron();
 
 // set up cors to allow us to accept requests from our client
 app.use(
