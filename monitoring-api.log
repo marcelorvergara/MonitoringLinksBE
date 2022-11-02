@@ -1,2 +1,5 @@
 2022-11-01T20:53:46.742Z [monitoring-api] error GET  - Method GET; URL /auth; Error msg: This authorization code has been used.
 2022-11-01T20:57:37.786Z [monitoring-api] error GET  - Method GET; URL /auth; Error msg: This authorization code has been used.
+2022-11-02T16:00:43.619Z [monitoring-api] info POST /urls - {"url_id":1,"url":"https://imovel.br.com","user_id":"2181350602051173"}
+2022-11-02T16:04:09.326Z [monitoring-api] info POST /urls - {"url_id":2,"url":"http://google.com","user_id":"2181350602051173"}
+2022-11-02T16:05:39.570Z [monitoring-api] info POST /urls - {"url_id":3,"url":"http://www.google.com.br","user_id":"2181350602051173"}
