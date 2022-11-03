@@ -13,8 +13,21 @@ function startCron() {
         const results = [];
         urlsToMonitor.forEach(async (urlObj) => {
             const startTime = new Date().getTime() / 1000;
-            await axios_1.default.get(urlObj.url).then((response) => {
+            await axios_1.default
+                .get(urlObj.url, { headers: { "User-Agent": "Mozilla/5.0" } })
+                .then((response) => {
                 const statusCode = response.status;
+                const endTime = new Date().getTime() / 1000;
+                const elapsedTime = endTime - startTime;
+                results.push({
+                    status: statusCode,
+                    load_time: Math.round((elapsedTime + Number.EPSILON) * 100) / 100,
+                    url_id: urlObj.url_id,
+                });
+            })
+                .catch((err) => {
+                console.log("ERROR", err.response);
+                const statusCode = err.response.status;
                 const endTime = new Date().getTime() / 1000;
                 const elapsedTime = endTime - startTime;
                 results.push({

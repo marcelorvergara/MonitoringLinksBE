@@ -11,16 +11,29 @@ export default function startCron() {
     const results: IUrlStatus[] = [];
     urlsToMonitor.forEach(async (urlObj: IUrl) => {
       const startTime = new Date().getTime() / 1000;
-      await axios.get(urlObj.url).then((response) => {
-        const statusCode = response.status;
-        const endTime = new Date().getTime() / 1000;
-        const elapsedTime = endTime - startTime;
-        results.push({
-          status: statusCode,
-          load_time: Math.round((elapsedTime + Number.EPSILON) * 100) / 100,
-          url_id: urlObj.url_id,
+      await axios
+        .get(urlObj.url, { headers: { "User-Agent": "Mozilla/5.0" } })
+        .then((response) => {
+          const statusCode = response.status;
+          const endTime = new Date().getTime() / 1000;
+          const elapsedTime = endTime - startTime;
+          results.push({
+            status: statusCode,
+            load_time: Math.round((elapsedTime + Number.EPSILON) * 100) / 100,
+            url_id: urlObj.url_id,
+          });
+        })
+        .catch((err) => {
+          console.log("ERROR", err.response);
+          const statusCode = err.response.status;
+          const endTime = new Date().getTime() / 1000;
+          const elapsedTime = endTime - startTime;
+          results.push({
+            status: statusCode,
+            load_time: Math.round((elapsedTime + Number.EPSILON) * 100) / 100,
+            url_id: urlObj.url_id,
+          });
         });
-      });
       if (results.length === urlsToMonitor.length) {
         UrlStatus.insertUrlStatus(results);
       }
