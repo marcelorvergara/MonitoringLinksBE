@@ -7,7 +7,10 @@ const urls_repository_1 = __importDefault(require("../repository/urls.repository
 async function createUrlMonitor(url) {
     return await urls_repository_1.default.createUrlMonitor(url);
 }
-async function getUrlMonitors() {
+async function getUrlMonitors(user_id) {
+    if (user_id) {
+        return await urls_repository_1.default.getUrlMonitorsByUser(user_id);
+    }
     return await urls_repository_1.default.getUrlMonitors();
 }
 exports.default = {

@@ -20,6 +20,16 @@ async function createUrlMonitor(
   }
 }
 
+async function getUrlMonitor(req: Request, res: Response, next: NextFunction) {
+  try {
+    res.send(await UrlsService.getUrlMonitors(parseInt(req.params.id)));
+    logger.info(`GET /urls - User Id ${req.params.id}`);
+  } catch (err) {
+    next(err);
+  }
+}
+
 export default {
   createUrlMonitor,
+  getUrlMonitor,
 };
