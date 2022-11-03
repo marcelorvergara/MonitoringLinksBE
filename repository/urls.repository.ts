@@ -4,8 +4,10 @@ import { connect } from "./db";
 async function createUrlMonitor(url: IUrl) {
   const conn = await connect();
   try {
-    const sql = "INSERT INTO urls (url, user_id) VALUES ($1, $2) RETURNING *";
-    const values = [url.url, url.user_id];
+    const now = new Date();
+    const sql =
+      "INSERT INTO urls (url, user_id, created_at) VALUES ($1, $2, $3) RETURNING *";
+    const values = [url.url, url.user_id, now];
     const res = await conn.query(sql, values);
     return res.rows[0];
   } catch (err) {
