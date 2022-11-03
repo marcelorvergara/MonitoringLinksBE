@@ -3,12 +3,13 @@ import UrlsService from "../services/urls.service";
 import axios from "axios";
 import UrlStatus from "../repository/urlStatus.repository";
 import { IUrlStatus } from "../interfaces/IUrlStatus";
+import { IUrl } from "../interfaces/IUrl";
 
 export default function startCron() {
-  cron.schedule("* * * * *", async () => {
+  cron.schedule("*/10 * * * *", async () => {
     const urlsToMonitor = await UrlsService.getUrlMonitors();
     const results: IUrlStatus[] = [];
-    urlsToMonitor.forEach(async (urlObj) => {
+    urlsToMonitor.forEach(async (urlObj: IUrl) => {
       const startTime = new Date().getTime() / 1000;
       await axios.get(urlObj.url).then((response) => {
         const statusCode = response.status;

@@ -3,3 +3,45 @@
 2022-11-02T16:00:43.619Z [monitoring-api] info POST /urls - {"url_id":1,"url":"https://imovel.br.com","user_id":"2181350602051173"}
 2022-11-02T16:04:09.326Z [monitoring-api] info POST /urls - {"url_id":2,"url":"http://google.com","user_id":"2181350602051173"}
 2022-11-02T16:05:39.570Z [monitoring-api] info POST /urls - {"url_id":3,"url":"http://www.google.com.br","user_id":"2181350602051173"}
+2022-11-02T23:38:17.858Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-02T23:38:17.898Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-02T23:41:15.825Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-02T23:41:15.851Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-02T23:46:12.795Z [monitoring-api] error GET  - Method GET; URL /urls; Error msg: bind message supplies 1 parameters, but prepared statement "" requires 0
+2022-11-02T23:46:12.826Z [monitoring-api] error GET  - Method GET; URL /urls; Error msg: bind message supplies 1 parameters, but prepared statement "" requires 0
+2022-11-02T23:46:18.053Z [monitoring-api] error GET  - Method GET; URL /urls; Error msg: bind message supplies 1 parameters, but prepared statement "" requires 0
+2022-11-02T23:46:18.079Z [monitoring-api] error GET  - Method GET; URL /urls; Error msg: bind message supplies 1 parameters, but prepared statement "" requires 0
+2022-11-02T23:46:33.374Z [monitoring-api] error GET  - Method GET; URL /urls; Error msg: bind message supplies 1 parameters, but prepared statement "" requires 0
+2022-11-02T23:46:33.399Z [monitoring-api] error GET  - Method GET; URL /urls; Error msg: bind message supplies 1 parameters, but prepared statement "" requires 0
+2022-11-02T23:46:36.274Z [monitoring-api] error GET  - Method GET; URL /urls; Error msg: bind message supplies 1 parameters, but prepared statement "" requires 0
+2022-11-02T23:46:36.293Z [monitoring-api] error GET  - Method GET; URL /urls; Error msg: bind message supplies 1 parameters, but prepared statement "" requires 0
+2022-11-02T23:47:36.167Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-02T23:47:36.198Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-02T23:54:06.545Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-02T23:54:06.571Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:04:20.010Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:04:28.927Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:05:38.255Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:06:08.607Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:09:03.668Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:09:34.668Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:11:49.240Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:11:49.583Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:12:18.405Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:14:22.728Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:14:23.039Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:14:31.582Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:14:45.697Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:16:04.720Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:16:48.707Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:17:07.685Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:19:13.315Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:19:28.641Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:19:38.067Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:19:56.191Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:20:15.629Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:20:21.616Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:20:32.634Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:20:41.540Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:20:46.559Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-03T00:20:46.871Z [monitoring-api] info GET /urls - User Id 2181350602051173

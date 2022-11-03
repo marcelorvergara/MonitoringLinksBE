@@ -5,7 +5,10 @@ async function createUrlMonitor(url: IUrl) {
   return await UrlRepository.createUrlMonitor(url);
 }
 
-async function getUrlMonitors() {
+async function getUrlMonitors(user_id?: number) {
+  if (user_id) {
+    return await UrlRepository.getUrlMonitorsByUser(user_id);
+  }
   return await UrlRepository.getUrlMonitors();
 }
 

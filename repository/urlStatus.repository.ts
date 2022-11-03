@@ -2,7 +2,6 @@ import { IUrlStatus } from "../interfaces/IUrlStatus";
 import { connect } from "./db";
 
 export async function insertUrlStatus(results: IUrlStatus[]) {
-  console.log([...results]);
   const conn = await connect();
   const resultsQuery: IUrlStatus[] = [];
   try {

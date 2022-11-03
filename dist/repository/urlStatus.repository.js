@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.insertUrlStatus = void 0;
 const db_1 = require("./db");
 async function insertUrlStatus(results) {
-    console.log([...results]);
     const conn = await (0, db_1.connect)();
     const resultsQuery = [];
     try {
