@@ -1,8 +1,14 @@
+import { testUrl } from "../helpers/helpers";
 import { IUrl } from "../interfaces/IUrl";
 import UrlRepository from "../repository/urls.repository";
 
 async function createUrlMonitor(url: IUrl) {
-  return await UrlRepository.createUrlMonitor(url);
+  // test URL
+  const testResult = await testUrl(url.url);
+  if (testResult === "ok") {
+    return await UrlRepository.createUrlMonitor(url);
+  }
+  return testResult;
 }
 
 async function getUrlMonitors(user_id?: number) {
