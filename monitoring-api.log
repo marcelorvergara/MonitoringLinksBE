@@ -291,3 +291,16 @@
 2022-11-04T21:09:22.809Z [monitoring-api] info GET /urls - User Id 2181350602051173
 2022-11-04T21:15:39.897Z [monitoring-api] info POST /urls - {"url_id":4,"url":"www.google.com","user_id":"2181350602051173","created_at":"2022-11-04T21:15:39.876Z"}
 2022-11-04T21:15:47.755Z [monitoring-api] info POST /urls - {"url_id":5,"url":"http://google.com","user_id":"2181350602051173","created_at":"2022-11-04T21:15:47.735Z"}
+2022-11-04T21:22:57.840Z [monitoring-api] info POST /urls - {"url_id":6,"url":"http://google.com.br","user_id":"2181350602051173","created_at":"2022-11-04T21:22:57.813Z"}
+2022-11-04T21:26:44.601Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-04T21:26:44.626Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-04T21:35:29.174Z [monitoring-api] info POST /urls - undefined
+2022-11-04T21:36:02.343Z [monitoring-api] info POST /urls - undefined
+2022-11-04T21:36:40.689Z [monitoring-api] info POST /urls - undefined
+2022-11-04T21:40:37.016Z [monitoring-api] info POST /urls - ""
+2022-11-04T21:41:07.198Z [monitoring-api] info POST /urls - ""
+2022-11-04T21:42:54.451Z [monitoring-api] info POST /urls - undefined
+2022-11-04T21:49:47.005Z [monitoring-api] info POST /urls - "error"
+2022-11-04T21:50:08.163Z [monitoring-api] info POST /urls - {"url_id":7,"url":"http://google.com","user_id":"2181350602051173","created_at":"2022-11-04T21:50:08.144Z"}
+2022-11-04T21:53:16.692Z [monitoring-api] info POST /urls - "error"
+2022-11-04T21:53:31.608Z [monitoring-api] info POST /urls - {"url_id":8,"url":"https://www.zapimoveis.com.br","user_id":"2181350602051173","created_at":"2022-11-04T21:53:31.581Z"}
