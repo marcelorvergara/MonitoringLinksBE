@@ -12,8 +12,7 @@ async function createUrlMonitor(
     if (!url.url || !url.user_id) {
       throw new Error("Url and user Id must be provided!");
     }
-    url = await UrlsService.createUrlMonitor(url);
-    res.send(url);
+    res.send(await UrlsService.createUrlMonitor(url));
     logger.info(`POST /urls - ${JSON.stringify(url)}`);
   } catch (err) {
     next(err);

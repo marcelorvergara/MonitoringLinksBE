@@ -7,11 +7,7 @@ const helpers_1 = require("../helpers/helpers");
 const urls_repository_1 = __importDefault(require("../repository/urls.repository"));
 async function createUrlMonitor(url) {
     // test URL
-    const testResult = await (0, helpers_1.testUrl)(url.url);
-    if (testResult === "ok") {
-        return await urls_repository_1.default.createUrlMonitor(url);
-    }
-    return testResult;
+    return await (0, helpers_1.testUrl)(url);
 }
 async function getUrlMonitors(user_id) {
     if (user_id) {
