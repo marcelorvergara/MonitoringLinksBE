@@ -28,7 +28,8 @@ async function testUrl(url) {
             const resInsUrl = await urls_repository_1.default.createUrlMonitor(url);
             // insert url status in URL Status table
             resultArray[0].url_id = resInsUrl.url_id;
-            return await urlStatus_repository_1.default.insertUrlStatus(resultArray);
+            const returnResult = await urlStatus_repository_1.default.insertUrlStatus(resultArray);
+            return returnResult[0];
         }
         else {
             return { error: "Invalid URL or firewall block rule" };

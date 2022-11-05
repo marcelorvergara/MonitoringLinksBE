@@ -27,7 +27,10 @@ export async function testUrl(url: IUrl) {
       const resInsUrl = await UrlsService.createUrlMonitor(url);
       // insert url status in URL Status table
       resultArray[0].url_id = resInsUrl.url_id;
-      return await UrlStatusRepository.insertUrlStatus(resultArray);
+      const returnResult = await UrlStatusRepository.insertUrlStatus(
+        resultArray
+      );
+      return returnResult[0];
     } else {
       return { error: "Invalid URL or firewall block rule" };
     }
