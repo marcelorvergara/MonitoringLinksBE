@@ -304,3 +304,49 @@
 2022-11-04T21:50:08.163Z [monitoring-api] info POST /urls - {"url_id":7,"url":"http://google.com","user_id":"2181350602051173","created_at":"2022-11-04T21:50:08.144Z"}
 2022-11-04T21:53:16.692Z [monitoring-api] info POST /urls - "error"
 2022-11-04T21:53:31.608Z [monitoring-api] info POST /urls - {"url_id":8,"url":"https://www.zapimoveis.com.br","user_id":"2181350602051173","created_at":"2022-11-04T21:53:31.581Z"}
+2022-11-04T21:56:27.557Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-04T21:56:27.586Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T09:25:52.718Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T09:25:52.749Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T09:25:55.714Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T09:25:55.737Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T09:26:28.195Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T09:26:28.218Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T09:26:31.478Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T09:26:31.508Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T09:27:02.512Z [monitoring-api] info POST /urls - "error"
+2022-11-05T09:28:08.661Z [monitoring-api] info POST /urls - {"error":"Invalid URL or firewall block rule"}
+2022-11-05T09:28:13.587Z [monitoring-api] info POST /urls - {"error":"Invalid URL or firewall block rule"}
+2022-11-05T09:29:30.026Z [monitoring-api] info POST /urls - {"error":"Invalid URL or firewall block rule"}
+2022-11-05T09:36:13.358Z [monitoring-api] info POST /urls - {"error":"Invalid URL or firewall block rule"}
+2022-11-05T09:37:27.532Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T09:37:27.557Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T09:42:11.693Z [monitoring-api] info POST /urls - {"url_id":9,"url":"https://imovel.br.com","user_id":"2181350602051173","created_at":"2022-11-05T09:42:11.672Z"}
+2022-11-05T09:46:28.823Z [monitoring-api] info POST /urls - {"error":"Invalid URL or firewall block rule"}
+2022-11-05T09:49:19.527Z [monitoring-api] info POST /urls - {"url_id":10,"url":"https://imovel.br.com","user_id":"2181350602051173","created_at":"2022-11-05T09:49:19.506Z"}
+2022-11-05T10:18:20.295Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:18:20.323Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:21:09.172Z [monitoring-api] error GET  - Method GET; URL /urls; Error msg: relation "urls" does not exist
+2022-11-05T10:21:09.195Z [monitoring-api] error GET  - Method GET; URL /urls; Error msg: relation "urls" does not exist
+2022-11-05T10:21:13.715Z [monitoring-api] error GET  - Method GET; URL /urls; Error msg: relation "urls" does not exist
+2022-11-05T10:21:13.736Z [monitoring-api] error GET  - Method GET; URL /urls; Error msg: relation "urls" does not exist
+2022-11-05T10:21:42.102Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:21:42.124Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:38:24.326Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:38:24.367Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:38:28.664Z [monitoring-api] info POST /urls - {"url":"sdafgsdfg","user_id":"2181350602051173"}
+2022-11-05T10:38:39.874Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"2181350602051173"}
+2022-11-05T10:38:48.087Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:38:48.107Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:42:04.035Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:42:04.069Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:42:32.288Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:42:32.309Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:42:34.314Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:42:34.337Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:43:37.495Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:43:37.524Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:43:41.098Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:43:41.121Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:45:07.363Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:45:07.386Z [monitoring-api] info GET /urls - User Id 2181350602051173

@@ -4,11 +4,7 @@ import UrlRepository from "../repository/urls.repository";
 
 async function createUrlMonitor(url: IUrl) {
   // test URL
-  const testResult = await testUrl(url.url);
-  if (testResult === "ok") {
-    return await UrlRepository.createUrlMonitor(url);
-  }
-  return testResult;
+  return await testUrl(url);
 }
 
 async function getUrlMonitors(user_id?: number) {
