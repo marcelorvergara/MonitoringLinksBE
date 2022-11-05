@@ -34,7 +34,7 @@ router.get("/facebook/logout", function (req, res, next) {
                 return next(err);
             }
         });
-        res.redirect(process.env.CLIENT_URL + "/");
+        res.send({ message: "Success" });
     }
     catch (err) {
         next(err);

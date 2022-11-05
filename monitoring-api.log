@@ -350,3 +350,75 @@
 2022-11-05T10:43:41.121Z [monitoring-api] info GET /urls - User Id 2181350602051173
 2022-11-05T10:45:07.363Z [monitoring-api] info GET /urls - User Id 2181350602051173
 2022-11-05T10:45:07.386Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:46:38.593Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:49:56.428Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:51:31.931Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:51:51.002Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:51:51.053Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:52:36.177Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:52:36.223Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:54:09.468Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:54:09.492Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:54:31.152Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:54:50.368Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:55:02.864Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:55:02.882Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:59:05.075Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T10:59:05.098Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:00:37.749Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:00:37.768Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:00:43.231Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:00:43.280Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:06:10.876Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:06:11.179Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:06:57.520Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:10:00.671Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:15:44.488Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:15:44.814Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:15:54.306Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:15:54.614Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:16:03.004Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:16:03.314Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:22:12.797Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:22:13.141Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:30:01.896Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:30:01.914Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:30:07.099Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:30:07.119Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:30:57.848Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T11:30:57.870Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:37:43.607Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:37:43.918Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:40:06.660Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:40:14.239Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:40:14.542Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:40:17.552Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:40:17.860Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:40:24.906Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"2181350602051173"}
+2022-11-05T12:40:32.408Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:40:32.756Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:40:48.115Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:40:54.241Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"2181350602051173"}
+2022-11-05T12:41:01.088Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:41:01.412Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:41:47.612Z [monitoring-api] info POST /urls - {"url":"https://www.zapimoveis.com.br","user_id":"2181350602051173"}
+2022-11-05T12:42:38.890Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:42:39.192Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:42:48.255Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"2181350602051173"}
+2022-11-05T12:45:01.500Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:45:01.803Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:45:07.755Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.comasd","user_id":"2181350602051173"}
+2022-11-05T12:45:26.057Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"2181350602051173"}
+2022-11-05T12:47:31.143Z [monitoring-api] info POST /urls - {"url":"asdf","user_id":"2181350602051173"}
+2022-11-05T12:49:30.796Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:49:31.112Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:50:34.908Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:50:35.233Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:50:36.774Z [monitoring-api] info POST /urls - {"url":"sdaf","user_id":"2181350602051173"}
+2022-11-05T12:50:53.383Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"2181350602051173"}
+2022-11-05T12:51:47.447Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.comas","user_id":"2181350602051173"}
+2022-11-05T12:51:54.987Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"2181350602051173"}
+2022-11-05T12:51:56.233Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"2181350602051173"}
+2022-11-05T12:52:43.958Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:52:44.260Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-05T12:52:59.882Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"2181350602051173"}
