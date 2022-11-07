@@ -4,6 +4,7 @@ import passport from "passport";
 import cors from "cors";
 import authRoutes from "./routes/auth.routes";
 import urlRoutes from "./routes/urls.routes";
+import urlSatusRoutes from "./routes/urlStatus.routes";
 import { NextFunction } from "express-serve-static-core";
 import cookieSession from "cookie-session";
 import cookieParser from "cookie-parser";
@@ -63,6 +64,7 @@ app.use(passport.session());
 // routes
 app.use("/auth", authRoutes);
 app.use("/urls", urlRoutes);
+app.use("/urlStatus", urlSatusRoutes);
 
 const authCheck = (req: Request, res: Response, next: NextFunction) => {
   if (!req.user) {

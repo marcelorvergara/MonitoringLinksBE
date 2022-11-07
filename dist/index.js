@@ -9,6 +9,7 @@ const passport_1 = __importDefault(require("passport"));
 const cors_1 = __importDefault(require("cors"));
 const auth_routes_1 = __importDefault(require("./routes/auth.routes"));
 const urls_routes_1 = __importDefault(require("./routes/urls.routes"));
+const urlStatus_routes_1 = __importDefault(require("./routes/urlStatus.routes"));
 const cookie_session_1 = __importDefault(require("cookie-session"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const mongodb_db_1 = require("./repository/mongodb.db");
@@ -39,6 +40,7 @@ app.use(passport_1.default.session());
 // routes
 app.use("/auth", auth_routes_1.default);
 app.use("/urls", urls_routes_1.default);
+app.use("/urlStatus", urlStatus_routes_1.default);
 const authCheck = (req, res, next) => {
     if (!req.user) {
         res.status(401).json({

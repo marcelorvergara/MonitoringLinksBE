@@ -9,6 +9,7 @@ const axios_1 = __importDefault(require("axios"));
 const urlStatus_repository_1 = __importDefault(require("../repository/urlStatus.repository"));
 function startCron() {
     node_cron_1.default.schedule("*/10 * * * *", async () => {
+        console.log("checking services");
         const urlsToMonitor = await urls_service_1.default.getUrlMonitors();
         const results = [];
         urlsToMonitor.forEach(async (urlObj) => {

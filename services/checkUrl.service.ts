@@ -7,6 +7,7 @@ import { IUrl } from "../interfaces/IUrl";
 
 export default function startCron() {
   cron.schedule("*/10 * * * *", async () => {
+    console.log("checking services");
     const urlsToMonitor = await UrlsService.getUrlMonitors();
     const results: IUrlStatus[] = [];
     urlsToMonitor.forEach(async (urlObj: IUrl) => {
