@@ -2,6 +2,19 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.insertUrlStatus = void 0;
 const db_1 = require("./db");
+async function getUrlMonitorsByUser(user_id) {
+    const conn = await (0, db_1.connect)();
+    try {
+        const res = await conn.query("SELECT us.urlstatus_id, u.url, u.user_id, u.url_id, us.status, us.load_time, us.created_at FROM urls u INNER JOIN urlStatus us ON u.url_id = us.url_id where u.user_id = $1 ORDER BY us.urlstatus_id DESC LIMIT 15", [user_id]);
+        return res.rows;
+    }
+    catch (err) {
+        throw err;
+    }
+    finally {
+        conn.release();
+    }
+}
 async function insertUrlStatus(results) {
     const conn = await (0, db_1.connect)();
     const resultsQuery = [];
@@ -25,4 +38,5 @@ async function insertUrlStatus(results) {
 exports.insertUrlStatus = insertUrlStatus;
 exports.default = {
     insertUrlStatus,
+    getUrlMonitorsByUser,
 };
