@@ -19,10 +19,19 @@ async function createUrlMonitor(
   }
 }
 
-async function getUrlMonitor(req: Request, res: Response, next: NextFunction) {
+async function getUrls(req: Request, res: Response, next: NextFunction) {
   try {
-    res.send(await UrlsService.getUrlMonitors());
+    res.send(await UrlsService.getUrls(parseInt(req.params.id)));
     logger.info(`GET /urls - User Id ${req.params.id}`);
+  } catch (err) {
+    next(err);
+  }
+}
+
+async function deleteUrl(req: Request, res: Response, next: NextFunction) {
+  try {
+    res.send(await UrlsService.deleteUrl(parseInt(req.params.id)));
+    logger.info(`DELETE /urls - Url Id ${req.params.id}`);
   } catch (err) {
     next(err);
   }
@@ -30,5 +39,6 @@ async function getUrlMonitor(req: Request, res: Response, next: NextFunction) {
 
 export default {
   createUrlMonitor,
-  getUrlMonitor,
+  getUrls,
+  deleteUrl,
 };

@@ -20,7 +20,39 @@ async function createUrlMonitor(url: IUrl) {
 async function getUrlMonitors() {
   const conn = await connect();
   try {
-    const res = await conn.query("Select * from urls");
+    const res = await conn.query("Select * from urls ");
+    return res.rows;
+  } catch (err) {
+    throw err;
+  } finally {
+    conn.release();
+  }
+}
+
+async function getUrls(id: number) {
+  const conn = await connect();
+  try {
+    const res = await conn.query("Select * from urls where user_id = $1", [id]);
+    return res.rows;
+  } catch (err) {
+    throw err;
+  } finally {
+    conn.release();
+  }
+}
+
+async function deleteUrl(id: number) {
+  const conn = await connect();
+  try {
+    // first delete status for this url
+    const delStatus = await conn.query(
+      "Delete from urlStatus where url_id = $1",
+      [id]
+    );
+    const res = await conn.query(
+      "Delete from urls where url_id = $1 RETURNING *",
+      [id]
+    );
     return res.rows;
   } catch (err) {
     throw err;
@@ -32,4 +64,6 @@ async function getUrlMonitors() {
 export default {
   createUrlMonitor,
   getUrlMonitors,
+  getUrls,
+  deleteUrl,
 };
