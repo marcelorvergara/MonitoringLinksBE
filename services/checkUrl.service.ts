@@ -1,7 +1,7 @@
 import cron from "node-cron";
 import UrlsService from "../services/urls.service";
 import axios from "axios";
-import UrlStatus from "../repository/urlStatus.repository";
+import UrlStatusRepository from "../repository/urlStatus.repository";
 import { IUrlStatus } from "../interfaces/IUrlStatus";
 import { IUrl } from "../interfaces/IUrl";
 
@@ -36,7 +36,7 @@ export default function startCron() {
           });
         });
       if (results.length === urlsToMonitor.length) {
-        UrlStatus.insertUrlStatus(results);
+        UrlStatusRepository.insertUrlStatus(results);
       }
     });
   });
