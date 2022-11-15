@@ -105,6 +105,7 @@ passport.deserializeUser(async (profile: IUser[], done) => {
       done(new Error("Failed to deserialize an user"));
     }
   } catch (err) {
+    console.log("error deserializing user", err);
     throw err;
   } finally {
     client.close();
@@ -145,8 +146,8 @@ passport.use(
         }
         done(null, currentUser);
       } catch (err: any) {
-        console.log("err", err);
-        throw new Error(err);
+        console.log("error fetching user", err);
+        throw err;
       } finally {
         client.close();
       }
