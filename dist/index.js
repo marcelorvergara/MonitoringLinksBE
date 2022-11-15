@@ -80,6 +80,7 @@ passport_1.default.deserializeUser(async (profile, done) => {
         }
     }
     catch (err) {
+        console.log("error deserializing user", err);
         throw err;
     }
     finally {
@@ -113,8 +114,8 @@ passport_1.default.use(new FacebookStrategy({
         done(null, currentUser);
     }
     catch (err) {
-        console.log("err", err);
-        throw new Error(err);
+        console.log("error fetching user", err);
+        throw err;
     }
     finally {
         client.close();
