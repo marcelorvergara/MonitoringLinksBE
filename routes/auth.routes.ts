@@ -1,8 +1,15 @@
 import express, { NextFunction, Request, Response } from "express";
 import passport from "passport";
-import { CLIENT_URL } from "..";
+import dotenv from "dotenv";
 
 const router = express.Router();
+
+dotenv.config();
+
+const REDIRECT_URL =
+  process.env.ENV_ARG === "DEV"
+    ? process.env.CLIENT_URL_DEV
+    : process.env.CLIENT_URL_PRD;
 
 router.get("/login/success", (req, res) => {
   if (req.user) {
@@ -42,29 +49,16 @@ router.get("/facebook/logout", function (req, res, next) {
 // auth with fb
 router.get("/facebook", passport.authenticate("facebook"));
 
-// redirect to home page after successfully login via twitter
-// router.get(
-//   "/facebook/redirect",
-//   passport.authenticate("facebook", {
-//     successRedirect: CLIENT_HOME_PAGE_URL,
-//     failureRedirect: "/auth/login/failed",
-//   })
-// );
-
 router.get(
   "/facebook/redirect",
-  passport.authenticate("facebook", { failureRedirect: "/auth/login/failed" }),
-  function (_req, res, next) {
-    try {
-      // Successful authentication, redirect home.
-      res.redirect(CLIENT_URL!);
-    } catch (err) {
-      next(err);
-    }
-  }
+  passport.authenticate("facebook", {
+    successRedirect: REDIRECT_URL,
+    failureRedirect: "/auth/login/failed",
+  })
 );
 
 router.use((err: any, req: Request, _res: Response, next: NextFunction) => {
+  console.log("err", err);
   const errorStr = `Method ${req.method}; URL ${req.baseUrl}; Error msg: ${err.message}`;
   next(errorStr);
 });
