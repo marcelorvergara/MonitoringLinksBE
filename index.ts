@@ -31,9 +31,28 @@ interface IUser {
 
 dotenv.config();
 
+export const CLIENT_URL =
+  process.env.ENV_ARG === "DEV"
+    ? process.env.CLIENT_URL_DEV
+    : process.env.CLIENT_URL_PRD;
+const SERVER_URL =
+  process.env.ENV_ARG === "DEV"
+    ? process.env.SERVER_URL_DEV
+    : process.env.SERVER_URL_PRD;
+const FACEBOOK_APP_ID =
+  process.env.ENV_ARG === "DEV"
+    ? process.env.FACEBOOK_APP_ID_DEV
+    : process.env.FACEBOOK_APP_ID_PRD;
+const FACEBOOK_APP_SECRET =
+  process.env.ENV_ARG === "DEV"
+    ? process.env.FACEBOOK_APP_SECRET_DEV
+    : process.env.FACEBOOK_APP_SECRET_PRD;
+
 const app: Express = express();
 app.use(express.json());
 const port = process.env.PORT;
+
+console.log("Env", process.env.ENV_ARG);
 
 // starting cron job
 startCron();
@@ -41,7 +60,7 @@ startCron();
 // set up cors to allow us to accept requests from our client
 app.use(
   cors({
-    origin: process.env.CLIENT_URL, // allow to server to accept request from different origin
+    origin: CLIENT_URL, // allow to server to accept request from different origin
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // allow session cookie from browser to pass through
   })
@@ -115,9 +134,9 @@ passport.deserializeUser(async (profile: IUser[], done) => {
 passport.use(
   new FacebookStrategy(
     {
-      clientID: process.env.FACEBOOK_APP_ID!,
-      clientSecret: process.env.FACEBOOK_APP_SECRET!,
-      callbackURL: "/auth/facebook/redirect",
+      clientID: FACEBOOK_APP_ID!,
+      clientSecret: FACEBOOK_APP_SECRET!,
+      callbackURL: SERVER_URL + "/auth/facebook/redirect",
       profileFields: ["id", "displayName", "photos", "email"],
     },
     async function (
