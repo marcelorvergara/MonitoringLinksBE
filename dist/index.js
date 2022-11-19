@@ -3,7 +3,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CLIENT_URL = void 0;
 const express_1 = __importDefault(require("express"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const passport_1 = __importDefault(require("passport"));
@@ -18,7 +17,7 @@ const winston_1 = __importDefault(require("winston"));
 const checkUrl_service_1 = __importDefault(require("./services/checkUrl.service"));
 var FacebookStrategy = require("passport-facebook").Strategy;
 dotenv_1.default.config();
-exports.CLIENT_URL = process.env.ENV_ARG === "DEV"
+const CLIENT_URL = process.env.ENV_ARG === "DEV"
     ? process.env.CLIENT_URL_DEV
     : process.env.CLIENT_URL_PRD;
 const SERVER_URL = process.env.ENV_ARG === "DEV"
@@ -38,13 +37,13 @@ console.log("Env", process.env.ENV_ARG);
 (0, checkUrl_service_1.default)();
 // set up cors to allow us to accept requests from our client
 app.use((0, cors_1.default)({
-    origin: exports.CLIENT_URL,
+    origin: CLIENT_URL,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // allow session cookie from browser to pass through
 }));
 app.use((0, cookie_session_1.default)({
     name: "session",
-    keys: ["keys"],
+    keys: [process.env.SESS_KEY],
     maxAge: 24 * 60 * 60 * 100,
 }));
 // parse cookies

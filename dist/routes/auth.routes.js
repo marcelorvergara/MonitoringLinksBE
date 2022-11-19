@@ -5,8 +5,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const passport_1 = __importDefault(require("passport"));
-const __1 = require("..");
+const dotenv_1 = __importDefault(require("dotenv"));
 const router = express_1.default.Router();
+dotenv_1.default.config();
+const REDIRECT_URL = process.env.ENV_ARG === "DEV"
+    ? process.env.CLIENT_URL_DEV
+    : process.env.CLIENT_URL_PRD;
 router.get("/login/success", (req, res) => {
     if (req.user) {
         res.json({
@@ -43,24 +47,12 @@ router.get("/facebook/logout", function (req, res, next) {
 });
 // auth with fb
 router.get("/facebook", passport_1.default.authenticate("facebook"));
-// redirect to home page after successfully login via twitter
-// router.get(
-//   "/facebook/redirect",
-//   passport.authenticate("facebook", {
-//     successRedirect: CLIENT_HOME_PAGE_URL,
-//     failureRedirect: "/auth/login/failed",
-//   })
-// );
-router.get("/facebook/redirect", passport_1.default.authenticate("facebook", { failureRedirect: "/auth/login/failed" }), function (_req, res, next) {
-    try {
-        // Successful authentication, redirect home.
-        res.redirect(__1.CLIENT_URL);
-    }
-    catch (err) {
-        next(err);
-    }
-});
+router.get("/facebook/redirect", passport_1.default.authenticate("facebook", {
+    successRedirect: REDIRECT_URL,
+    failureRedirect: "/auth/login/failed",
+}));
 router.use((err, req, _res, next) => {
+    console.log("err", err);
     const errorStr = `Method ${req.method}; URL ${req.baseUrl}; Error msg: ${err.message}`;
     next(errorStr);
 });

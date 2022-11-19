@@ -31,7 +31,7 @@ interface IUser {
 
 dotenv.config();
 
-export const CLIENT_URL =
+const CLIENT_URL =
   process.env.ENV_ARG === "DEV"
     ? process.env.CLIENT_URL_DEV
     : process.env.CLIENT_URL_PRD;
@@ -69,7 +69,7 @@ app.use(
 app.use(
   cookieSession({
     name: "session",
-    keys: ["keys"],
+    keys: [process.env.SESS_KEY!],
     maxAge: 24 * 60 * 60 * 100,
   })
 );
