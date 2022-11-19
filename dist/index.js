@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CLIENT_URL = void 0;
 const express_1 = __importDefault(require("express"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const passport_1 = __importDefault(require("passport"));
@@ -17,14 +18,27 @@ const winston_1 = __importDefault(require("winston"));
 const checkUrl_service_1 = __importDefault(require("./services/checkUrl.service"));
 var FacebookStrategy = require("passport-facebook").Strategy;
 dotenv_1.default.config();
+exports.CLIENT_URL = process.env.ENV_ARG === "DEV"
+    ? process.env.CLIENT_URL_DEV
+    : process.env.CLIENT_URL_PRD;
+const SERVER_URL = process.env.ENV_ARG === "DEV"
+    ? process.env.SERVER_URL_DEV
+    : process.env.SERVER_URL_PRD;
+const FACEBOOK_APP_ID = process.env.ENV_ARG === "DEV"
+    ? process.env.FACEBOOK_APP_ID_DEV
+    : process.env.FACEBOOK_APP_ID_PRD;
+const FACEBOOK_APP_SECRET = process.env.ENV_ARG === "DEV"
+    ? process.env.FACEBOOK_APP_SECRET_DEV
+    : process.env.FACEBOOK_APP_SECRET_PRD;
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 const port = process.env.PORT;
+console.log("Env", process.env.ENV_ARG);
 // starting cron job
 (0, checkUrl_service_1.default)();
 // set up cors to allow us to accept requests from our client
 app.use((0, cors_1.default)({
-    origin: process.env.CLIENT_URL,
+    origin: exports.CLIENT_URL,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // allow session cookie from browser to pass through
 }));
@@ -88,9 +102,9 @@ passport_1.default.deserializeUser(async (profile, done) => {
     }
 });
 passport_1.default.use(new FacebookStrategy({
-    clientID: process.env.FACEBOOK_APP_ID,
-    clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: "/auth/facebook/redirect",
+    clientID: FACEBOOK_APP_ID,
+    clientSecret: FACEBOOK_APP_SECRET,
+    callbackURL: SERVER_URL + "/auth/facebook/redirect",
     profileFields: ["id", "displayName", "photos", "email"],
 }, async function (accessToken, refreshToken, profile, done) {
     // find current user in UserModel

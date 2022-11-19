@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const passport_1 = __importDefault(require("passport"));
+const __1 = require("..");
 const router = express_1.default.Router();
 router.get("/login/success", (req, res) => {
     if (req.user) {
@@ -53,7 +54,7 @@ router.get("/facebook", passport_1.default.authenticate("facebook"));
 router.get("/facebook/redirect", passport_1.default.authenticate("facebook", { failureRedirect: "/auth/login/failed" }), function (_req, res, next) {
     try {
         // Successful authentication, redirect home.
-        res.redirect(`http://localhost:3000/`);
+        res.redirect(__1.CLIENT_URL);
     }
     catch (err) {
         next(err);

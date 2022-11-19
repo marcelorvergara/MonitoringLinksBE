@@ -1,5 +1,6 @@
 import express, { NextFunction, Request, Response } from "express";
 import passport from "passport";
+import { CLIENT_URL } from "..";
 
 const router = express.Router();
 
@@ -56,7 +57,7 @@ router.get(
   function (_req, res, next) {
     try {
       // Successful authentication, redirect home.
-      res.redirect(`http://localhost:3000/`);
+      res.redirect(CLIENT_URL!);
     } catch (err) {
       next(err);
     }
