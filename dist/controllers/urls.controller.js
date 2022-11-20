@@ -28,7 +28,7 @@ async function getUrls(req, res, next) {
 }
 async function deleteUrl(req, res, next) {
     try {
-        res.send(await urls_service_1.default.deleteUrl(req.params.id));
+        res.status(204).send(await urls_service_1.default.deleteUrl(req.params.id));
         logger.info(`DELETE /urls - Url Id ${req.params.id}`);
     }
     catch (err) {

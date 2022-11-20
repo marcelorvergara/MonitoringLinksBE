@@ -1163,3 +1163,16 @@
 2022-11-20T20:34:14.330Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
 2022-11-20T20:36:28.576Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
 2022-11-20T20:37:16.071Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T20:41:11.326Z [monitoring-api] info POST /urls - {"url":"https://www.zapimoveis.com.br","user_id":"116844276693429124349"}
+2022-11-20T20:45:23.932Z [monitoring-api] info POST /urls - {"url":"https://www.zapimoveis.sdfsd","user_id":"116844276693429124349"}
+2022-11-20T20:53:10.278Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T20:53:10.608Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T20:53:11.336Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T20:53:11.641Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T20:53:18.570Z [monitoring-api] info POST /urls - {"url":"https://www.moverz.com.br/","user_id":"116844276693429124349"}
+2022-11-20T20:54:16.341Z [monitoring-api] info POST /urls - {"url":"https://www.zapimoveis.com.br","user_id":"116844276693429124349"}
+2022-11-20T20:54:58.505Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T20:54:58.812Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T20:56:50.661Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T20:56:56.123Z [monitoring-api] info DELETE /urls - Url Id 94
+2022-11-20T20:58:20.823Z [monitoring-api] info DELETE /urls - Url Id 95
