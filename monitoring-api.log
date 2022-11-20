@@ -893,3 +893,212 @@
 2022-11-20T16:14:27.328Z [monitoring-api] info GET /urls - User Id 116844276693429124349
 2022-11-20T16:14:29.133Z [monitoring-api] info GET /urls - User Id 116844276693429124349
 2022-11-20T16:14:29.435Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T16:16:49.819Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T16:16:50.125Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T16:17:07.874Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T16:17:08.275Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T16:17:09.731Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T16:17:10.028Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T16:17:26.115Z [monitoring-api] info POST /urls - {"url":"http://ml.mvergara.net","user_id":"2181350602051173"}
+2022-11-20T16:17:32.405Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T16:17:32.762Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T16:29:08.432Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:29:08.728Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:29:18.139Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T16:29:20.016Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:29:20.308Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:30:39.972Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:30:40.280Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:30:41.781Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:30:42.101Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:31:11.797Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"106640627531669514920"}
+2022-11-20T16:31:21.547Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:31:21.860Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:32:02.609Z [monitoring-api] info POST /urls - {"url":"https://www.moverz.com.br/","user_id":"106640627531669514920"}
+2022-11-20T16:32:35.975Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:32:36.299Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:32:52.343Z [monitoring-api] info POST /urls - {"url":"https://www.zapimoveis.com.br","user_id":"106640627531669514920"}
+2022-11-20T16:33:18.113Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:33:18.439Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:35:19.425Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"106640627531669514920"}
+2022-11-20T16:35:59.086Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"106640627531669514920"}
+2022-11-20T16:36:23.223Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"106640627531669514920"}
+2022-11-20T16:36:30.364Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:36:30.684Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:37:38.722Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"106640627531669514920"}
+2022-11-20T16:38:37.973Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T16:38:57.942Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T16:39:11.399Z [monitoring-api] info POST /urls - {"url":"https://www.zapimoveis.com.br","user_id":"106640627531669514920"}
+2022-11-20T16:39:38.194Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T16:41:08.295Z [monitoring-api] info POST /urls - {"url":"https://www.moverz.com.br/","user_id":"106640627531669514920"}
+2022-11-20T16:41:42.699Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T16:44:35.297Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:44:35.620Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:44:37.327Z [monitoring-api] info DELETE /urls - Url Id 10
+2022-11-20T16:44:41.666Z [monitoring-api] info DELETE /urls - Url Id 11
+2022-11-20T16:44:45.283Z [monitoring-api] info DELETE /urls - Url Id 12
+2022-11-20T16:44:48.250Z [monitoring-api] info DELETE /urls - Url Id 13
+2022-11-20T16:44:49.893Z [monitoring-api] info DELETE /urls - Url Id 14
+2022-11-20T16:44:52.468Z [monitoring-api] info DELETE /urls - Url Id 15
+2022-11-20T16:44:54.154Z [monitoring-api] info DELETE /urls - Url Id 16
+2022-11-20T16:44:56.102Z [monitoring-api] info DELETE /urls - Url Id 17
+2022-11-20T16:45:07.562Z [monitoring-api] info DELETE /urls - Url Id 18
+2022-11-20T16:45:08.486Z [monitoring-api] info DELETE /urls - Url Id 19
+2022-11-20T16:45:10.502Z [monitoring-api] info DELETE /urls - Url Id 20
+2022-11-20T16:45:11.528Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:45:11.852Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:45:14.276Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:45:14.616Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:45:16.476Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:45:16.776Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:45:26.370Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T16:45:59.058Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:45:59.363Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:46:21.610Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"106640627531669514920"}
+2022-11-20T16:46:25.565Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:46:25.887Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:47:13.227Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"106640627531669514920"}
+2022-11-20T16:47:26.235Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"106640627531669514920"}
+2022-11-20T16:47:50.303Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:47:50.667Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:47:53.030Z [monitoring-api] info DELETE /urls - Url Id 25
+2022-11-20T16:47:54.105Z [monitoring-api] info DELETE /urls - Url Id 26
+2022-11-20T16:47:54.824Z [monitoring-api] info DELETE /urls - Url Id 27
+2022-11-20T16:47:57.489Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:47:57.823Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:48:17.562Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T16:48:26.398Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:48:26.758Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:48:29.504Z [monitoring-api] info DELETE /urls - Url Id 21
+2022-11-20T16:48:33.177Z [monitoring-api] info DELETE /urls - Url Id 23
+2022-11-20T16:48:33.865Z [monitoring-api] info DELETE /urls - Url Id 22
+2022-11-20T16:48:34.749Z [monitoring-api] info DELETE /urls - Url Id 24
+2022-11-20T16:48:35.995Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:48:36.295Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:49:06.608Z [monitoring-api] info POST /urls - {"url":"https://www.zapimoveis.com.br","user_id":"106640627531669514920"}
+2022-11-20T16:53:10.263Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T16:53:13.817Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:53:14.129Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:53:17.031Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:53:17.349Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:53:18.203Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:53:18.501Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:53:19.215Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:53:19.513Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:53:33.929Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"106640627531669514920"}
+2022-11-20T16:54:16.153Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T16:56:38.618Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:56:38.965Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:56:41.887Z [monitoring-api] info DELETE /urls - Url Id 31
+2022-11-20T16:56:43.976Z [monitoring-api] info DELETE /urls - Url Id 32
+2022-11-20T16:56:44.816Z [monitoring-api] info DELETE /urls - Url Id 30
+2022-11-20T16:56:46.500Z [monitoring-api] info DELETE /urls - Url Id 28
+2022-11-20T16:56:47.642Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:56:47.961Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:56:48.701Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:56:49.093Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:56:55.710Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:56:56.006Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T16:59:35.605Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T16:59:39.120Z [monitoring-api] info POST /urls - {"url":"www.google.com","user_id":"106640627531669514920"}
+2022-11-20T16:59:57.408Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T17:00:03.496Z [monitoring-api] info POST /urls - {"url":"www.google.com","user_id":"106640627531669514920"}
+2022-11-20T17:00:24.424Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:00:24.760Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:00:30.061Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T17:00:34.376Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:00:34.693Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:00:36.215Z [monitoring-api] info DELETE /urls - Url Id 29
+2022-11-20T17:00:37.264Z [monitoring-api] info DELETE /urls - Url Id 33
+2022-11-20T17:00:37.844Z [monitoring-api] info DELETE /urls - Url Id 34
+2022-11-20T17:00:39.873Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:00:40.169Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:02:53.668Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T17:02:58.604Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:02:58.980Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:03:04.264Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T17:04:21.132Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T17:04:25.314Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:04:25.654Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:04:32.526Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T17:04:32.908Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:04:33.204Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:04:44.779Z [monitoring-api] info DELETE /urls - Url Id 35
+2022-11-20T17:04:45.667Z [monitoring-api] info DELETE /urls - Url Id 36
+2022-11-20T17:04:46.663Z [monitoring-api] info DELETE /urls - Url Id 37
+2022-11-20T17:04:47.668Z [monitoring-api] info DELETE /urls - Url Id 38
+2022-11-20T17:04:47.715Z [monitoring-api] info DELETE /urls - Url Id 39
+2022-11-20T17:04:48.662Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:04:58.900Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:04:59.825Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:05:54.622Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T17:06:02.258Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T17:06:20.520Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:06:20.896Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:06:21.738Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:06:22.048Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:06:27.470Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T17:09:35.130Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T17:11:09.808Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T17:12:12.595Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"2181350602051173"}
+2022-11-20T17:12:33.753Z [monitoring-api] info POST /urls - {"url":"https://www.zapimoveis.com.br","user_id":"2181350602051173"}
+2022-11-20T17:12:36.729Z [monitoring-api] info POST /urls - {"url":"https://www.zapimoveis.com.br","user_id":"2181350602051173"}
+2022-11-20T17:12:38.631Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:12:38.923Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:12:48.794Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"2181350602051173"}
+2022-11-20T17:13:47.097Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:13:47.452Z [monitoring-api] info GET /urls - User Id 106640627531669514920
+2022-11-20T17:13:54.925Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T17:18:24.684Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T17:19:21.083Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"106640627531669514920"}
+2022-11-20T17:22:07.861Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"2181350602051173"}
+2022-11-20T17:29:27.417Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"2181350602051173"}
+2022-11-20T17:32:44.922Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:32:45.270Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:32:55.989Z [monitoring-api] info POST /urls - {"url":"https://www.moverz.com.br/","user_id":"2181350602051173"}
+2022-11-20T17:35:34.422Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T17:35:34.726Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T17:35:37.118Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T17:35:37.419Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T17:35:50.890Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"116844276693429124349"}
+2022-11-20T17:36:03.260Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T17:36:03.620Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T17:41:52.971Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"116844276693429124349"}
+2022-11-20T17:44:58.082Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"116844276693429124349"}
+2022-11-20T17:49:30.746Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"2181350602051173"}
+2022-11-20T17:50:09.678Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"2181350602051173"}
+2022-11-20T17:50:26.084Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:50:26.402Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:51:08.094Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"2181350602051173"}
+2022-11-20T17:51:19.151Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:51:19.450Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:51:20.929Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:51:21.250Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:51:22.455Z [monitoring-api] info DELETE /urls - Url Id 1
+2022-11-20T17:51:23.444Z [monitoring-api] info DELETE /urls - Url Id 3
+2022-11-20T17:51:25.039Z [monitoring-api] info DELETE /urls - Url Id 59
+2022-11-20T17:51:25.574Z [monitoring-api] info DELETE /urls - Url Id 60
+2022-11-20T17:51:26.107Z [monitoring-api] info DELETE /urls - Url Id 58
+2022-11-20T17:51:26.631Z [monitoring-api] info DELETE /urls - Url Id 54
+2022-11-20T17:51:27.127Z [monitoring-api] info DELETE /urls - Url Id 53
+2022-11-20T17:51:27.667Z [monitoring-api] info DELETE /urls - Url Id 52
+2022-11-20T17:51:28.272Z [monitoring-api] info DELETE /urls - Url Id 48
+2022-11-20T17:51:30.192Z [monitoring-api] info DELETE /urls - Url Id 47
+2022-11-20T17:51:30.768Z [monitoring-api] info DELETE /urls - Url Id 48
+2022-11-20T17:51:32.265Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:51:32.577Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:51:33.777Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:51:34.081Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:51:35.071Z [monitoring-api] info DELETE /urls - Url Id 4
+2022-11-20T17:51:46.468Z [monitoring-api] info DELETE /urls - Url Id 5
+2022-11-20T17:51:48.355Z [monitoring-api] info DELETE /urls - Url Id 9
+2022-11-20T17:51:48.412Z [monitoring-api] info DELETE /urls - Url Id 45
+2022-11-20T17:51:49.369Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:51:49.669Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:52:20.931Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:52:21.256Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:53:58.883Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"2181350602051173"}
+2022-11-20T17:54:29.128Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:54:29.444Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T17:54:33.679Z [monitoring-api] info POST /urls - {"url":"www.google.com","user_id":"2181350602051173"}
+2022-11-20T17:54:44.067Z [monitoring-api] info POST /urls - {"url":"https://www.google.com","user_id":"2181350602051173"}
