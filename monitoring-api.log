@@ -1176,3 +1176,185 @@
 2022-11-20T20:56:50.661Z [monitoring-api] info GET /urls - User Id 116844276693429124349
 2022-11-20T20:56:56.123Z [monitoring-api] info DELETE /urls - Url Id 94
 2022-11-20T20:58:20.823Z [monitoring-api] info DELETE /urls - Url Id 95
+2022-11-20T21:01:29.826Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:01:30.143Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:01:49.562Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:02:38.595Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:04:37.068Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:04:43.280Z [monitoring-api] info DELETE /urls - Url Id 65
+2022-11-20T21:05:34.237Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:06:08.865Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:06:10.955Z [monitoring-api] info DELETE /urls - Url Id 100
+2022-11-20T21:07:29.125Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:07:32.619Z [monitoring-api] info DELETE /urls - Url Id 99
+2022-11-20T21:07:41.488Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:08:02.362Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:08:04.651Z [monitoring-api] info DELETE /urls - Url Id 98
+2022-11-20T21:08:19.591Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:08:21.093Z [monitoring-api] info DELETE /urls - Url Id 97
+2022-11-20T21:09:40.757Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:09:42.666Z [monitoring-api] info DELETE /urls - Url Id 96
+2022-11-20T21:10:02.224Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:10:08.137Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"116844276693429124349"}
+2022-11-20T21:10:16.670Z [monitoring-api] info POST /urls - {"url":"https://www.moverz.com.br/","user_id":"116844276693429124349"}
+2022-11-20T21:10:23.114Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:10:24.901Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:10:27.022Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:10:28.361Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:10:29.566Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:12:10.580Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:12:10.883Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:12:14.077Z [monitoring-api] info DELETE /urls - Url Id 107
+2022-11-20T21:12:29.257Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:12:32.193Z [monitoring-api] info DELETE /urls - Url Id 106
+2022-11-20T21:13:32.238Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:13:35.148Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:13:35.472Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:13:36.999Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:13:37.317Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:13:38.962Z [monitoring-api] info DELETE /urls - Url Id 105
+2022-11-20T21:15:09.943Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:15:12.779Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:15:13.143Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:18:14.835Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:18:15.229Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:18:17.055Z [monitoring-api] info DELETE /urls - Url Id 104
+2022-11-20T21:18:56.018Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:18:59.990Z [monitoring-api] info DELETE /urls - Url Id 103
+2022-11-20T21:19:23.199Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:19:27.444Z [monitoring-api] info DELETE /urls - Url Id 102
+2022-11-20T21:19:35.366Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:19:35.737Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:19:36.366Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:19:36.722Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:19:41.624Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:19:42.816Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:19:44.528Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:19:55.941Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:19:57.760Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:19:57.832Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:19:58.753Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:19:59.522Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:19:59.838Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:21:13.866Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:21:23.559Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:21:23.854Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:21:26.061Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:21:26.386Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:21:40.313Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:21:55.213Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:21:58.863Z [monitoring-api] info DELETE /urls - Url Id 114
+2022-11-20T21:22:41.531Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:22:43.255Z [monitoring-api] info DELETE /urls - Url Id 113
+2022-11-20T21:23:36.973Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:23:38.876Z [monitoring-api] info DELETE /urls - Url Id 112
+2022-11-20T21:24:20.608Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:24:20.897Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:24:21.747Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:24:22.104Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:25:05.524Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:25:08.271Z [monitoring-api] info DELETE /urls - Url Id 111
+2022-11-20T21:25:22.460Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:25:25.364Z [monitoring-api] info DELETE /urls - Url Id 110
+2022-11-20T21:26:19.588Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:26:23.624Z [monitoring-api] info DELETE /urls - Url Id 110
+2022-11-20T21:26:30.984Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:28:14.052Z [monitoring-api] info DELETE /urls - Url Id 109
+2022-11-20T21:30:30.614Z [monitoring-api] info DELETE /urls - Url Id 108
+2022-11-20T21:30:44.118Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:30:44.431Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:30:44.899Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:30:45.239Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:31:03.589Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:31:04.422Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:31:08.090Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:31:23.095Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:31:33.067Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:32:22.803Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:33:13.818Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:33:13.874Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:33:18.615Z [monitoring-api] info DELETE /urls - Url Id 101
+2022-11-20T21:34:22.955Z [monitoring-api] info DELETE /urls - Url Id 116
+2022-11-20T21:36:49.554Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:36:54.320Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:36:54.338Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:36:54.989Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:36:55.011Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:36:56.558Z [monitoring-api] info DELETE /urls - Url Id 120
+2022-11-20T21:37:50.126Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:37:57.448Z [monitoring-api] info DELETE /urls - Url Id 119
+2022-11-20T21:38:20.914Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:38:23.297Z [monitoring-api] info DELETE /urls - Url Id 118
+2022-11-20T21:38:44.432Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:38:50.235Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:38:51.962Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:38:53.835Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:38:56.599Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:38:58.690Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:38:59.499Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:39:03.055Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:39:04.622Z [monitoring-api] info POST /urls - {"url":"http://google.com","user_id":"116844276693429124349"}
+2022-11-20T21:39:07.249Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:39:07.269Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:39:09.562Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:39:09.591Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:39:10.461Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:39:10.492Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:39:23.481Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:39:31.689Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:39:31.709Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:39:32.777Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:39:32.797Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:41:07.337Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:41:13.520Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:41:13.553Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:41:15.116Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:41:15.136Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:41:34.100Z [monitoring-api] info DELETE /urls - Url Id 125
+2022-11-20T21:42:58.447Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:42:58.474Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:43:01.099Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:43:01.118Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:43:09.093Z [monitoring-api] info DELETE /urls - Url Id 128
+2022-11-20T21:43:43.813Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:43:46.917Z [monitoring-api] info DELETE /urls - Url Id 127
+2022-11-20T21:44:13.731Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:44:15.957Z [monitoring-api] info DELETE /urls - Url Id 126
+2022-11-20T21:44:50.758Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:45:09.804Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:45:18.397Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:45:21.796Z [monitoring-api] info DELETE /urls - Url Id 121
+2022-11-20T21:45:23.916Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:45:23.937Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:45:24.611Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:45:24.631Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:45:26.190Z [monitoring-api] info DELETE /urls - Url Id 117
+2022-11-20T21:45:51.277Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:45:54.240Z [monitoring-api] info DELETE /urls - Url Id 115
+2022-11-20T21:45:54.272Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:45:57.095Z [monitoring-api] info DELETE /urls - Url Id 124
+2022-11-20T21:45:57.124Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:45:59.199Z [monitoring-api] info DELETE /urls - Url Id 123
+2022-11-20T21:45:59.226Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:46:00.772Z [monitoring-api] info DELETE /urls - Url Id 122
+2022-11-20T21:46:00.799Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:46:35.524Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:46:35.543Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:46:36.278Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:46:36.301Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:46:37.551Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:46:37.571Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:46:43.790Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"116844276693429124349"}
+2022-11-20T21:46:50.238Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:46:50.259Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:46:52.101Z [monitoring-api] info DELETE /urls - Url Id 129
+2022-11-20T21:46:52.154Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:47:02.969Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:47:03.014Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:47:09.733Z [monitoring-api] info POST /urls - {"url":"https://imovel.br.com","user_id":"116844276693429124349"}
+2022-11-20T21:47:11.948Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:47:11.999Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:48:51.484Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:48:51.511Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:48:53.692Z [monitoring-api] info DELETE /urls - Url Id 130
+2022-11-20T21:48:53.715Z [monitoring-api] info GET /urls - User Id 116844276693429124349

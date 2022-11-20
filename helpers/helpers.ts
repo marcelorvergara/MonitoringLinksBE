@@ -28,7 +28,6 @@ export async function testUrl(url: IUrl) {
       // insert url status in URL Status table
       resultArray[0].url_id = resInsUrl.url_id;
       // insert url
-      console.log(resInsUrl);
       const returnResult = await UrlStatusRepository.insertUrlStatus(
         resultArray
       );
