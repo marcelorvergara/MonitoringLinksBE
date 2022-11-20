@@ -12,8 +12,9 @@ import { getClient } from "./repository/mongodb.db";
 import winston from "winston";
 import startCron from "./services/checkUrl.service";
 var FacebookStrategy = require("passport-facebook").Strategy;
+var GoogleStrategy = require("passport-google-oauth20").Strategy;
 
-interface IProfile {
+interface IProfileFB {
   _json: IUser;
 }
 interface IUser {
@@ -27,6 +28,23 @@ interface IUser {
       width: number;
     };
   };
+}
+
+interface IProfileGoogle {
+  id: string;
+  displayName: string;
+  name: Name;
+  photos: Photo[];
+  provider: string;
+}
+
+interface Name {
+  familyName: string;
+  givenName: string;
+}
+
+interface Photo {
+  value: string;
 }
 
 dotenv.config();
@@ -142,7 +160,7 @@ passport.use(
     async function (
       accessToken: string,
       refreshToken: string,
-      profile: IProfile,
+      profile: IProfileFB,
       done: (arg0: any, arg1: any) => any
     ) {
       // find current user in UserModel
@@ -152,7 +170,7 @@ passport.use(
         const currentUser = await client
           .db("monitoringLinks")
           .collection("users")
-          .find({})
+          .find({ id: profile._json.id })
           .toArray();
         if (currentUser.length === 0) {
           const newUser = await client
@@ -160,6 +178,49 @@ passport.use(
             .collection("users")
             .insertOne(profile._json);
           if (newUser) {
+            done(null, newUser);
+          }
+        }
+        done(null, currentUser);
+      } catch (err: any) {
+        console.log("error fetching user", err);
+        throw err;
+      } finally {
+        client.close();
+      }
+    }
+  )
+);
+
+passport.use(
+  new GoogleStrategy(
+    {
+      clientID: process.env.GOOGLE_APP_ID,
+      clientSecret: process.env.GOOGLE_APP_SECRET,
+      callbackURL: SERVER_URL + "/auth/google/redirect",
+    },
+    async function (
+      accessToken: string,
+      refreshToken: string,
+      profile: IProfileGoogle,
+      done: (arg0: any, arg1: any) => any
+    ) {
+      // find current user in UserModel
+      const client = getClient();
+      try {
+        await client.connect();
+        const currentUser = await client
+          .db("monitoringLinks")
+          .collection("users")
+          .find({ id: profile.id })
+          .toArray();
+        if (currentUser.length === 0) {
+          const newUser = await client
+            .db("monitoringLinks")
+            .collection("users")
+            .insertOne(profile);
+          if (newUser) {
+            console.log("new user", newUser);
             done(null, newUser);
           }
         }

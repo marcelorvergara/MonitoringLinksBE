@@ -16,6 +16,7 @@ const mongodb_db_1 = require("./repository/mongodb.db");
 const winston_1 = __importDefault(require("winston"));
 const checkUrl_service_1 = __importDefault(require("./services/checkUrl.service"));
 var FacebookStrategy = require("passport-facebook").Strategy;
+var GoogleStrategy = require("passport-google-oauth20").Strategy;
 dotenv_1.default.config();
 const CLIENT_URL = process.env.ENV_ARG === "DEV"
     ? process.env.CLIENT_URL_DEV
@@ -113,7 +114,7 @@ passport_1.default.use(new FacebookStrategy({
         const currentUser = await client
             .db("monitoringLinks")
             .collection("users")
-            .find({})
+            .find({ id: profile._json.id })
             .toArray();
         if (currentUser.length === 0) {
             const newUser = await client
@@ -121,6 +122,40 @@ passport_1.default.use(new FacebookStrategy({
                 .collection("users")
                 .insertOne(profile._json);
             if (newUser) {
+                done(null, newUser);
+            }
+        }
+        done(null, currentUser);
+    }
+    catch (err) {
+        console.log("error fetching user", err);
+        throw err;
+    }
+    finally {
+        client.close();
+    }
+}));
+passport_1.default.use(new GoogleStrategy({
+    clientID: process.env.GOOGLE_APP_ID,
+    clientSecret: process.env.GOOGLE_APP_SECRET,
+    callbackURL: SERVER_URL + "/auth/google/redirect",
+}, async function (accessToken, refreshToken, profile, done) {
+    // find current user in UserModel
+    const client = (0, mongodb_db_1.getClient)();
+    try {
+        await client.connect();
+        const currentUser = await client
+            .db("monitoringLinks")
+            .collection("users")
+            .find({ id: profile.id })
+            .toArray();
+        if (currentUser.length === 0) {
+            const newUser = await client
+                .db("monitoringLinks")
+                .collection("users")
+                .insertOne(profile);
+            if (newUser) {
+                console.log("new user", newUser);
                 done(null, newUser);
             }
         }
