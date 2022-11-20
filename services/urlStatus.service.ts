@@ -7,7 +7,7 @@ async function createUrlMonitor(url: IUrl) {
   return await testUrl(url);
 }
 
-async function getUrlMonitorsByUser(user_id?: number) {
+async function getUrlMonitorsByUser(user_id?: string) {
   if (user_id) {
     return await UrlStatusRepository.getUrlMonitorsByUser(user_id);
   }

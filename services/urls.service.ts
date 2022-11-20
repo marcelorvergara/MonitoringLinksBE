@@ -11,11 +11,11 @@ async function getUrlMonitors() {
   return await UrlsRepository.getUrlMonitors();
 }
 
-async function getUrls(id: number) {
+async function getUrls(id: string) {
   return await UrlsRepository.getUrls(id);
 }
 
-async function deleteUrl(id: number) {
+async function deleteUrl(id: string) {
   return await UrlsRepository.deleteUrl(id);
 }
 

@@ -1,7 +1,7 @@
 import { IUrlStatus } from "../interfaces/IUrlStatus";
 import { connect } from "./db";
 
-async function getUrlMonitorsByUser(user_id: number) {
+async function getUrlMonitorsByUser(user_id: string) {
   const conn = await connect();
   try {
     const res = await conn.query(

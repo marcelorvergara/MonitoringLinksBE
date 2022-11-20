@@ -6,7 +6,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const urlStatus_service_1 = __importDefault(require("../services/urlStatus.service"));
 async function getUrlMonitorsByUser(req, res, next) {
     try {
-        res.send(await urlStatus_service_1.default.getUrlMonitorsByUser(parseInt(req.params.id)));
+        console.log(req.params.id);
+        console.log(parseInt(req.params.id, 22));
+        res.send(await urlStatus_service_1.default.getUrlMonitorsByUser(req.params.id));
         logger.info(`GET /urls - User Id ${req.params.id}`);
     }
     catch (err) {
