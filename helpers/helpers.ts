@@ -1,6 +1,5 @@
 import axios from "axios";
 import { IUrl } from "../interfaces/IUrl";
-import { IUrlStatus } from "../interfaces/IUrlStatus";
 import UrlStatusRepository from "../repository/urlStatus.repository";
 import UrlsService from "../repository/urls.repository";
 
@@ -22,14 +21,18 @@ export async function testUrl(url: IUrl) {
         status: statusCode,
         load_time: Math.round((elapsedTime + Number.EPSILON) * 100) / 100,
         url_id: -1,
+        url: "",
       });
       // insert url in URLS table
       const resInsUrl = await UrlsService.createUrlMonitor(url);
       // insert url status in URL Status table
       resultArray[0].url_id = resInsUrl.url_id;
+      // insert url
+      console.log(resInsUrl);
       const returnResult = await UrlStatusRepository.insertUrlStatus(
         resultArray
       );
+      returnResult[0].url = resInsUrl.url;
       return returnResult[0];
     } else {
       return { error: "Invalid URL or firewall block rule" };
