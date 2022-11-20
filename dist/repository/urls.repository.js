@@ -49,7 +49,7 @@ async function deleteUrl(id) {
         // first delete status for this url
         const delStatus = await conn.query("Delete from urlStatus where url_id = $1", [id]);
         const res = await conn.query("Delete from urls where url_id = $1 RETURNING *", [id]);
-        return res.rows;
+        return res.rows[0];
     }
     catch (err) {
         throw err;

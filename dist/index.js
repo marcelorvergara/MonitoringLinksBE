@@ -155,7 +155,6 @@ passport_1.default.use(new GoogleStrategy({
                 .collection("users")
                 .insertOne(profile);
             if (newUser) {
-                console.log("new user", newUser);
                 done(null, newUser);
             }
         }

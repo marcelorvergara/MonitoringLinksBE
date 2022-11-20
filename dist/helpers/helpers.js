@@ -30,7 +30,6 @@ async function testUrl(url) {
             // insert url status in URL Status table
             resultArray[0].url_id = resInsUrl.url_id;
             // insert url
-            console.log(resInsUrl);
             const returnResult = await urlStatus_repository_1.default.insertUrlStatus(resultArray);
             returnResult[0].url = resInsUrl.url;
             return returnResult[0];

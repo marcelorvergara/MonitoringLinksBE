@@ -28,7 +28,8 @@ async function getUrls(req, res, next) {
 }
 async function deleteUrl(req, res, next) {
     try {
-        res.status(204).send(await urls_service_1.default.deleteUrl(req.params.id));
+        // cant set status 204 - fe doesnt convert json()
+        res.send(await urls_service_1.default.deleteUrl(req.params.id));
         logger.info(`DELETE /urls - Url Id ${req.params.id}`);
     }
     catch (err) {
