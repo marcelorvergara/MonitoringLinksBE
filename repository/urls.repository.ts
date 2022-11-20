@@ -29,7 +29,7 @@ async function getUrlMonitors() {
   }
 }
 
-async function getUrls(id: number) {
+async function getUrls(id: string) {
   const conn = await connect();
   try {
     const res = await conn.query("Select * from urls where user_id = $1", [id]);
@@ -41,7 +41,7 @@ async function getUrls(id: number) {
   }
 }
 
-async function deleteUrl(id: number) {
+async function deleteUrl(id: string) {
   const conn = await connect();
   try {
     // first delete status for this url

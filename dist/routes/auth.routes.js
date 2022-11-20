@@ -32,8 +32,9 @@ router.get("/login/failed", (_req, res) => {
     });
 });
 // When logout, redirect to client
-router.get("/facebook/logout", function (req, res, next) {
+router.get("/logout", function (req, res, next) {
     try {
+        req.session.destroy;
         req.logout({ keepSessionInfo: false }, function (err) {
             if (err) {
                 return next(err);
@@ -58,7 +59,6 @@ router.get("/google/redirect", passport_1.default.authenticate("google", {
     failureRedirect: "/auth/login/failed",
 }));
 router.use((err, req, _res, next) => {
-    console.log("err", err);
     const errorStr = `Method ${req.method}; URL ${req.baseUrl}; Error msg: ${err.message}`;
     next(errorStr);
 });

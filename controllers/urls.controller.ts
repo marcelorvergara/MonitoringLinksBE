@@ -21,7 +21,7 @@ async function createUrlMonitor(
 
 async function getUrls(req: Request, res: Response, next: NextFunction) {
   try {
-    res.send(await UrlsService.getUrls(parseInt(req.params.id)));
+    res.send(await UrlsService.getUrls(req.params.id));
     logger.info(`GET /urls - User Id ${req.params.id}`);
   } catch (err) {
     next(err);
@@ -30,7 +30,7 @@ async function getUrls(req: Request, res: Response, next: NextFunction) {
 
 async function deleteUrl(req: Request, res: Response, next: NextFunction) {
   try {
-    res.send(await UrlsService.deleteUrl(parseInt(req.params.id)));
+    res.send(await UrlsService.deleteUrl(req.params.id));
     logger.info(`DELETE /urls - Url Id ${req.params.id}`);
   } catch (err) {
     next(err);

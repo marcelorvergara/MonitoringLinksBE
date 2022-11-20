@@ -19,7 +19,7 @@ async function createUrlMonitor(req, res, next) {
 }
 async function getUrls(req, res, next) {
     try {
-        res.send(await urls_service_1.default.getUrls(parseInt(req.params.id)));
+        res.send(await urls_service_1.default.getUrls(req.params.id));
         logger.info(`GET /urls - User Id ${req.params.id}`);
     }
     catch (err) {
@@ -28,7 +28,7 @@ async function getUrls(req, res, next) {
 }
 async function deleteUrl(req, res, next) {
     try {
-        res.send(await urls_service_1.default.deleteUrl(parseInt(req.params.id)));
+        res.send(await urls_service_1.default.deleteUrl(req.params.id));
         logger.info(`DELETE /urls - Url Id ${req.params.id}`);
     }
     catch (err) {
