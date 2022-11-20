@@ -51,6 +51,12 @@ router.get("/facebook/redirect", passport_1.default.authenticate("facebook", {
     successRedirect: REDIRECT_URL,
     failureRedirect: "/auth/login/failed",
 }));
+// auth with google
+router.get("/google", passport_1.default.authenticate("google", { scope: ["profile"] }));
+router.get("/google/redirect", passport_1.default.authenticate("google", {
+    successRedirect: REDIRECT_URL,
+    failureRedirect: "/auth/login/failed",
+}));
 router.use((err, req, _res, next) => {
     console.log("err", err);
     const errorStr = `Method ${req.method}; URL ${req.baseUrl}; Error msg: ${err.message}`;

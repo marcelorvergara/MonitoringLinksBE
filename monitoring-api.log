@@ -763,3 +763,64 @@
 2022-11-19T18:57:12.528Z [monitoring-api] info GET /urls - User Id 2181350602051173
 2022-11-19T18:57:12.551Z [monitoring-api] info GET /urls - User Id 2181350602051173
 2022-11-19T20:36:54.471Z [monitoring-api] error GET  - Method GET; URL /auth; Error msg: Unknown authentication strategy "twitter"
+2022-11-20T10:08:31.559Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:08:31.879Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:08:50.930Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:08:51.260Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:08:51.639Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:08:51.994Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:08:52.966Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:08:53.311Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:08:53.912Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:08:54.247Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:08:55.182Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:08:55.508Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:11:09.991Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:11:17.189Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:11:17.499Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:11:29.416Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:11:40.313Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:11:45.639Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:11:57.205Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:12:33.960Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:12:52.266Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:12:56.679Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:15:44.939Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:15:45.254Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:16:30.635Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:16:51.624Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:16:52.020Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:16:53.178Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:16:53.483Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:16:56.558Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:16:56.953Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:16:57.532Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:16:57.840Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:17:06.046Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:17:06.341Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:32:26.661Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:32:27.010Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:32:28.681Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T10:32:28.984Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T12:00:07.064Z [monitoring-api] error GET  - Failed to deserialize an user
+2022-11-20T12:20:18.354Z [monitoring-api] error GET  - Failed to deserialize an user
+2022-11-20T12:20:18.671Z [monitoring-api] error GET  - Failed to deserialize an user
+2022-11-20T12:20:21.738Z [monitoring-api] error GET  - Failed to deserialize an user
+2022-11-20T12:20:49.650Z [monitoring-api] error GET  - Failed to deserialize an user
+2022-11-20T12:20:49.963Z [monitoring-api] error GET  - Failed to deserialize an user
+2022-11-20T12:20:52.529Z [monitoring-api] error GET  - Failed to deserialize an user
+2022-11-20T12:21:45.814Z [monitoring-api] error GET  - Failed to deserialize an user
+2022-11-20T12:21:46.141Z [monitoring-api] error GET  - Failed to deserialize an user
+2022-11-20T12:24:19.605Z [monitoring-api] error GET  - Method GET; URL /auth; Error msg: Cannot set headers after they are sent to the client
+2022-11-20T12:24:19.920Z [monitoring-api] error GET  - Failed to deserialize an user
+2022-11-20T12:24:19.931Z [monitoring-api] error GET  - Failed to deserialize an user
+2022-11-20T12:25:44.553Z [monitoring-api] error GET  - Failed to deserialize an user
+2022-11-20T12:26:05.900Z [monitoring-api] error GET  - Failed to deserialize an user
+2022-11-20T12:26:06.192Z [monitoring-api] error GET  - Failed to deserialize an user
+2022-11-20T12:31:57.079Z [monitoring-api] error GET  - Method GET; URL /auth; Error msg: Cannot set headers after they are sent to the client
+2022-11-20T12:31:57.393Z [monitoring-api] error GET  - Failed to deserialize an user
+2022-11-20T12:31:57.401Z [monitoring-api] error GET  - Failed to deserialize an user
+2022-11-20T12:47:44.075Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T12:47:44.387Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T12:47:57.256Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T12:47:57.606Z [monitoring-api] info GET /urls - User Id 2181350602051173
