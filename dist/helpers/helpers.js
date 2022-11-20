@@ -23,12 +23,16 @@ async function testUrl(url) {
                 status: statusCode,
                 load_time: Math.round((elapsedTime + Number.EPSILON) * 100) / 100,
                 url_id: -1,
+                url: "",
             });
             // insert url in URLS table
             const resInsUrl = await urls_repository_1.default.createUrlMonitor(url);
             // insert url status in URL Status table
             resultArray[0].url_id = resInsUrl.url_id;
+            // insert url
+            console.log(resInsUrl);
             const returnResult = await urlStatus_repository_1.default.insertUrlStatus(resultArray);
+            returnResult[0].url = resInsUrl.url;
             return returnResult[0];
         }
         else {

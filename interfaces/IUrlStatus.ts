@@ -3,4 +3,5 @@ export interface IUrlStatus {
   status: number;
   load_time: number;
   url_id: number;
+  url?: string;
 }
