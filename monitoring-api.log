@@ -1358,3 +1358,35 @@
 2022-11-20T21:48:51.511Z [monitoring-api] info GET /urls - User Id 116844276693429124349
 2022-11-20T21:48:53.692Z [monitoring-api] info DELETE /urls - Url Id 130
 2022-11-20T21:48:53.715Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-20T21:50:57.114Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-20T21:50:57.463Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-21T14:39:06.826Z [monitoring-api] info GET /checkUrl - checking urls
+2022-11-21T14:39:26.901Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-21T14:39:27.231Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-21T14:41:21.967Z [monitoring-api] info GET /checkUrl - checking urls
+2022-11-21T14:41:43.692Z [monitoring-api] info GET /checkUrl - checking urls
+2022-11-21T14:42:33.554Z [monitoring-api] info GET /checkUrl - checking urls
+2022-11-21T14:43:32.799Z [monitoring-api] info GET /checkUrl - checking urls
+2022-11-21T14:43:47.348Z [monitoring-api] info GET /checkUrl - checking urls
+2022-11-21T14:45:27.468Z [monitoring-api] error GET  - Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property 'parser' -> object with constructor 'HTTPParser'
+    --- property 'socket' closes the circle
+2022-11-21T14:52:28.594Z [monitoring-api] info GET /checkUrl - checking urls
+2022-11-21T14:54:50.839Z [monitoring-api] info GET /checkUrl - checking urls
+2022-11-21T14:56:55.331Z [monitoring-api] info GET /checkUrl - checking urls
+2022-11-21T14:57:09.974Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-21T14:57:10.333Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-21T14:57:10.831Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-21T14:57:11.353Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-21T15:19:09.519Z [monitoring-api] info GET /checkUrl - checking urls
+2022-11-21T15:21:33.916Z [monitoring-api] info GET /checkUrl - checking urls
+2022-11-21T15:24:13.858Z [monitoring-api] info GET /checkUrl - checking urls
+2022-11-21T15:25:02.420Z [monitoring-api] info GET /checkUrl - checking urls
+2022-11-21T15:25:33.854Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-21T15:25:34.190Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-21T15:40:38.110Z [monitoring-api] info GET /checkUrl - Unauthorized
+2022-11-21T16:48:26.446Z [monitoring-api] info GET /checkUrl - Unauthorized
+2022-11-21T16:55:57.081Z [monitoring-api] info GET /checkUrl - Unauthorized
+2022-11-21T16:56:22.143Z [monitoring-api] info GET /checkUrl - Unauthorized
+2022-11-21T16:58:22.753Z [monitoring-api] info GET /checkUrl - Checking urls

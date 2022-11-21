@@ -1,0 +1,4 @@
+cron:
+  - description: "test URLs"
+    url: /checkUrl
+    schedule: every 10 mins
