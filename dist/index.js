@@ -10,11 +10,11 @@ const cors_1 = __importDefault(require("cors"));
 const auth_routes_1 = __importDefault(require("./routes/auth.routes"));
 const urls_routes_1 = __importDefault(require("./routes/urls.routes"));
 const urlStatus_routes_1 = __importDefault(require("./routes/urlStatus.routes"));
+const checkUrl_route_1 = __importDefault(require("./routes/checkUrl.route"));
 const cookie_session_1 = __importDefault(require("cookie-session"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const mongodb_db_1 = require("./repository/mongodb.db");
 const winston_1 = __importDefault(require("winston"));
-const checkUrl_service_1 = __importDefault(require("./services/checkUrl.service"));
 var FacebookStrategy = require("passport-facebook").Strategy;
 var GoogleStrategy = require("passport-google-oauth20").Strategy;
 dotenv_1.default.config();
@@ -34,8 +34,6 @@ const app = (0, express_1.default)();
 app.use(express_1.default.json());
 const port = process.env.PORT;
 console.log("Env", process.env.ENV_ARG);
-// starting cron job
-(0, checkUrl_service_1.default)();
 // set up cors to allow us to accept requests from our client
 app.use((0, cors_1.default)({
     origin: CLIENT_URL,
@@ -55,6 +53,7 @@ app.use(passport_1.default.session());
 app.use("/auth", auth_routes_1.default);
 app.use("/urls", urls_routes_1.default);
 app.use("/urlStatus", urlStatus_routes_1.default);
+app.use("/checkUrl", checkUrl_route_1.default);
 const authCheck = (req, res, next) => {
     if (!req.user) {
         res.status(401).json({

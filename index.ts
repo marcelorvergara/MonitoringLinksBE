@@ -5,12 +5,12 @@ import cors from "cors";
 import authRoutes from "./routes/auth.routes";
 import urlRoutes from "./routes/urls.routes";
 import urlSatusRoutes from "./routes/urlStatus.routes";
+import checkUrl from "./routes/checkUrl.route";
 import { NextFunction } from "express-serve-static-core";
 import cookieSession from "cookie-session";
 import cookieParser from "cookie-parser";
 import { getClient } from "./repository/mongodb.db";
 import winston from "winston";
-import startCron from "./services/checkUrl.service";
 var FacebookStrategy = require("passport-facebook").Strategy;
 var GoogleStrategy = require("passport-google-oauth20").Strategy;
 
@@ -72,9 +72,6 @@ const port = process.env.PORT;
 
 console.log("Env", process.env.ENV_ARG);
 
-// starting cron job
-startCron();
-
 // set up cors to allow us to accept requests from our client
 app.use(
   cors({
@@ -102,6 +99,7 @@ app.use(passport.session());
 app.use("/auth", authRoutes);
 app.use("/urls", urlRoutes);
 app.use("/urlStatus", urlSatusRoutes);
+app.use("/checkUrl", checkUrl);
 
 const authCheck = (req: Request, res: Response, next: NextFunction) => {
   if (!req.user) {
