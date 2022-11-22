@@ -49,11 +49,6 @@ app.use((0, cookie_session_1.default)({
 app.use((0, cookie_parser_1.default)());
 app.use(passport_1.default.initialize());
 app.use(passport_1.default.session());
-// routes
-app.use("/auth", auth_routes_1.default);
-app.use("/urls", urls_routes_1.default);
-app.use("/urlStatus", urlStatus_routes_1.default);
-app.use("/checkUrl", checkUrl_route_1.default);
 const authCheck = (req, res, next) => {
     if (!req.user) {
         res.status(401).json({
@@ -65,6 +60,11 @@ const authCheck = (req, res, next) => {
         next();
     }
 };
+// routes
+app.use("/auth", auth_routes_1.default);
+app.use("/urls", authCheck, urls_routes_1.default);
+app.use("/urlStatus", authCheck, urlStatus_routes_1.default);
+app.use("/checkUrl", checkUrl_route_1.default);
 app.get("/", authCheck, (req, res) => {
     res.status(200).json({
         authenticated: true,

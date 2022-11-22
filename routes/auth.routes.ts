@@ -35,13 +35,13 @@ router.get("/login/failed", (_req, res) => {
 // When logout, redirect to client
 router.get("/logout", function (req, res, next) {
   try {
-    req.session.destroy;
-    req.logout({ keepSessionInfo: false }, function (err) {
-      if (err) {
-        return next(err);
-      }
+    res.cookie("session", "none", {
+      expires: new Date(Date.now() + 4 * 1000),
+      httpOnly: true,
     });
-    res.send({ message: "Success" });
+    res
+      .status(200)
+      .json({ success: true, message: "Logged out successfully!" });
   } catch (err) {
     next(err);
   }
