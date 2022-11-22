@@ -95,12 +95,6 @@ app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
 
-// routes
-app.use("/auth", authRoutes);
-app.use("/urls", urlRoutes);
-app.use("/urlStatus", urlSatusRoutes);
-app.use("/checkUrl", checkUrl);
-
 const authCheck = (req: Request, res: Response, next: NextFunction) => {
   if (!req.user) {
     res.status(401).json({
@@ -111,6 +105,12 @@ const authCheck = (req: Request, res: Response, next: NextFunction) => {
     next();
   }
 };
+
+// routes
+app.use("/auth", authRoutes);
+app.use("/urls", authCheck, urlRoutes);
+app.use("/urlStatus", authCheck, urlSatusRoutes);
+app.use("/checkUrl", checkUrl);
 
 app.get("/", authCheck, (req, res) => {
   res.status(200).json({
