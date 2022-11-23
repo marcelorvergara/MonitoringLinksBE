@@ -70,8 +70,6 @@ const app: Express = express();
 app.use(express.json());
 const port = process.env.PORT;
 
-console.log("Env", process.env.ENV_ARG);
-
 // set up cors to allow us to accept requests from our client
 app.use(
   cors({
@@ -140,7 +138,7 @@ passport.deserializeUser(async (profile: IUser[], done) => {
       done(new Error("Failed to deserialize an user"));
     }
   } catch (err) {
-    console.log("error deserializing user", err);
+    logger.error("error deserializing user", err);
     throw err;
   } finally {
     client.close();
@@ -181,7 +179,7 @@ passport.use(
         }
         done(null, currentUser);
       } catch (err: any) {
-        console.log("error fetching user", err);
+        logger.error("error fetching user", err);
         throw err;
       } finally {
         client.close();
@@ -223,7 +221,7 @@ passport.use(
         }
         done(null, currentUser);
       } catch (err: any) {
-        console.log("error fetching user", err);
+        logger.error("error fetching user", err);
         throw err;
       } finally {
         client.close();
@@ -250,6 +248,8 @@ global.logger = winston.createLogger({
   format: combine(label({ label: "monitoring-api" }), timestamp(), myFormat),
 });
 
+logger.info("Env", process.env.ENV_ARG);
+
 // error log
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   if (err.message) {
@@ -262,5 +262,5 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 });
 
 app.listen(port, () => {
-  console.log(`[server]: Server is running at http://localhost:${port}`);
+  logger.info(`[server]: Server is running at http://localhost:${port}`);
 });

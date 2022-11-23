@@ -5,7 +5,7 @@ async function checkUrlSvc(req: Request, res: Response, next: NextFunction) {
   try {
     // restrict access to cron job
     if (req.headers["x-appengine-cron"] === "true") {
-      // await CheckUrl.checkUrlSvc();
+      await CheckUrl.checkUrlSvc();
       res.send("Checks are going to start");
       logger.info(`GET /checkUrl - Checking urls`);
     } else {
