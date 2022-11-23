@@ -1476,3 +1476,32 @@
 2022-11-22T17:41:43.287Z [monitoring-api] info GET /urls - User Id 116844276693429124349
 2022-11-22T17:41:45.427Z [monitoring-api] info GET /urls - User Id 116844276693429124349
 2022-11-22T17:41:45.742Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-22T20:25:13.124Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-22T20:25:13.513Z [monitoring-api] info GET /urls - User Id 2181350602051173
+2022-11-23T10:40:51.087Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-23T10:40:51.428Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-23T10:43:10.249Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-23T10:43:10.682Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-23T10:43:24.305Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-23T10:43:24.705Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-23T10:43:25.384Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-23T10:43:25.795Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-23T10:44:27.327Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-23T10:44:27.650Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-23T10:44:28.267Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-23T10:44:33.662Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-23T10:47:36.223Z [monitoring-api] info GET /checkUrl - Unauthorized
+2022-11-23T10:47:54.089Z [monitoring-api] info GET /checkUrl - Checking urls
+2022-11-23T10:48:43.933Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-23T10:48:44.271Z [monitoring-api] info GET /urls - User Id 116844276693429124349
+2022-11-23T10:49:55.121Z [monitoring-api] info GET /checkUrl - Checking urls
+2022-11-23T10:51:37.812Z [monitoring-api] info GET /checkUrl - Checking urls
+2022-11-23T10:53:28.018Z [monitoring-api] info GET /checkUrl - Checking urls
+2022-11-23T10:54:35.129Z [monitoring-api] info GET /checkUrl - Checking urls
+2022-11-23T10:58:38.158Z [monitoring-api] error GET  - nok
+2022-11-23T11:01:01.773Z [monitoring-api] error GET  - nok
+2022-11-23T11:02:31.377Z [monitoring-api] error GET  - nok
+2022-11-23T11:07:28.698Z [monitoring-api] info Env
+2022-11-23T11:07:28.706Z [monitoring-api] info [server]: Server is running at http://localhost:3001
+2022-11-23T11:12:40.206Z [monitoring-api] info Env
+2022-11-23T11:12:40.212Z [monitoring-api] info [server]: Server is running at http://localhost:3001

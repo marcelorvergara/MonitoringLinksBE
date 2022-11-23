@@ -33,7 +33,6 @@ const FACEBOOK_APP_SECRET = process.env.ENV_ARG === "DEV"
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 const port = process.env.PORT;
-console.log("Env", process.env.ENV_ARG);
 // set up cors to allow us to accept requests from our client
 app.use((0, cors_1.default)({
     origin: CLIENT_URL,
@@ -93,7 +92,7 @@ passport_1.default.deserializeUser(async (profile, done) => {
         }
     }
     catch (err) {
-        console.log("error deserializing user", err);
+        logger.error("error deserializing user", err);
         throw err;
     }
     finally {
@@ -127,7 +126,7 @@ passport_1.default.use(new FacebookStrategy({
         done(null, currentUser);
     }
     catch (err) {
-        console.log("error fetching user", err);
+        logger.error("error fetching user", err);
         throw err;
     }
     finally {
@@ -160,7 +159,7 @@ passport_1.default.use(new GoogleStrategy({
         done(null, currentUser);
     }
     catch (err) {
-        console.log("error fetching user", err);
+        logger.error("error fetching user", err);
         throw err;
     }
     finally {
@@ -183,6 +182,7 @@ global.logger = winston_1.default.createLogger({
     ],
     format: combine(label({ label: "monitoring-api" }), timestamp(), myFormat),
 });
+logger.info("Env", process.env.ENV_ARG);
 // error log
 app.use((err, req, res, next) => {
     if (err.message) {
@@ -195,5 +195,5 @@ app.use((err, req, res, next) => {
     }
 });
 app.listen(port, () => {
-    console.log(`[server]: Server is running at http://localhost:${port}`);
+    logger.info(`[server]: Server is running at http://localhost:${port}`);
 });

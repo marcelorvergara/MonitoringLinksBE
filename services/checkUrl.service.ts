@@ -22,7 +22,7 @@ async function checkUrlSvc() {
         });
       })
       .catch((err) => {
-        console.log("ERROR", err.response);
+        logger.error("ERROR", err.response);
         const statusCode = err.response.status;
         const endTime = new Date().getTime() / 1000;
         const elapsedTime = endTime - startTime;
