@@ -5,6 +5,7 @@ import cors from "cors";
 import authRoutes from "./routes/auth.routes";
 import urlRoutes from "./routes/urls.routes";
 import urlSatusRoutes from "./routes/urlStatus.routes";
+import urlStatistics from "./routes/urlsStatistics.route";
 import checkUrl from "./routes/checkUrl.route";
 import { NextFunction } from "express-serve-static-core";
 import cookieSession from "cookie-session";
@@ -109,6 +110,7 @@ app.use("/auth", authRoutes);
 app.use("/urls", authCheck, urlRoutes);
 app.use("/urlStatus", authCheck, urlSatusRoutes);
 app.use("/checkUrl", checkUrl);
+app.use("/statistics", authCheck, urlStatistics);
 
 app.get("/", authCheck, (req, res) => {
   res.status(200).json({
