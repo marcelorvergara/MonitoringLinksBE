@@ -16,6 +16,16 @@ async function getUrlsStatisticsByUser(
   }
 }
 
+async function getLastHour(req: Request, res: Response, next: NextFunction) {
+  try {
+    res.send(await UrlsStatisticsService.getLastHour(req.params.id));
+    logger.info(`GET /statistics/lastDay - User Id ${req.params.id}`);
+  } catch (err) {
+    next(err);
+  }
+}
+
 export default {
   getUrlsStatisticsByUser,
+  getLastHour,
 };
