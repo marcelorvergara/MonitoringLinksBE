@@ -20,7 +20,7 @@ async function getUrlsStatisticsByUser(user_id: string) {
   }
 }
 
-async function getLastHour(user_id: string) {
+async function getLastSixHour(user_id: string) {
   const conn = await connect();
   //WHERE us.created_at BETWEEN '2022-11-24 23:55:00'::timestamp AND now()::timestamp AND  u.user_id = $1
   try {
@@ -29,7 +29,7 @@ async function getLastHour(user_id: string) {
         FROM urls u
         INNER JOIN urlStatus us
         ON u.url_id = us.url_id
-        WHERE us.created_at >= now() - interval '1 hour' AND  u.user_id = $1
+        WHERE us.created_at >= now() - interval '6 hour' AND  u.user_id = $1
         ORDER BY us.created_at`,
       [user_id]
     );
@@ -43,5 +43,5 @@ async function getLastHour(user_id: string) {
 
 export default {
   getUrlsStatisticsByUser,
-  getLastHour,
+  getLastSixHour,
 };
