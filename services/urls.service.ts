@@ -3,6 +3,11 @@ import { IUrl } from "../interfaces/IUrl";
 import UrlsRepository from "../repository/urls.repository";
 
 async function createUrlMonitor(url: IUrl) {
+  // limit to four urls
+  const totUrls = await UrlsRepository.getUrls(url.user_id);
+  if (totUrls.length > 3) {
+    throw new Error("Limit of 4 URLs reached");
+  }
   // test URL to insert
   return await testUrl(url);
 }
