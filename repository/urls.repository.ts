@@ -53,7 +53,7 @@ async function deleteUrl(id: string) {
       "Delete from urls where url_id = $1 RETURNING *",
       [id]
     );
-    return res.rows[0];
+    return res.rows;
   } catch (err) {
     throw err;
   } finally {
