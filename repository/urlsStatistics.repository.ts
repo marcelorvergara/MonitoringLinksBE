@@ -9,7 +9,9 @@ async function getUrlsStatisticsByUser(user_id: string) {
         INNER JOIN urlStatus
         ON urls.url_id = urlstatus.url_id
         WHERE urls.user_id = $1
-        GROUP BY url`,
+        GROUP BY urls.url_id
+        ORDER BY urls.url_id
+         `,
       [user_id]
     );
     return res.rows;
@@ -30,7 +32,7 @@ async function getLastSixHour(user_id: string) {
         INNER JOIN urlStatus us
         ON u.url_id = us.url_id
         WHERE us.created_at >= now() - interval '6 hour' AND  u.user_id = $1
-        ORDER BY us.created_at, u.url_id`,
+        ORDER BY u.url_id, us.created_at`,
       [user_id]
     );
     return res.rows;
