@@ -1,6 +1,7 @@
 import express, { NextFunction, Request, Response } from "express";
 import passport from "passport";
 import dotenv from "dotenv";
+import UrlsService from "../services/urls.service";
 
 const router = express.Router();
 
@@ -11,13 +12,16 @@ const REDIRECT_URL =
     ? process.env.CLIENT_URL_DEV
     : process.env.CLIENT_URL_PRD;
 
-router.get("/login/success", (req, res) => {
+router.get("/login/success", async (req, res) => {
   if (req.user) {
+    const user = req.user as IUser;
+    const urls = await UrlsService.getUrls(user.id);
     res.json({
       success: true,
       message: "User has successfully authenticates",
       user: req.user,
       cookies: req.cookies,
+      totUrls: urls.length,
     });
   } else {
     res.status(400).send("Not authenticated :-(");

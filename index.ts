@@ -15,39 +15,6 @@ import winston from "winston";
 var FacebookStrategy = require("passport-facebook").Strategy;
 var GoogleStrategy = require("passport-google-oauth20").Strategy;
 
-interface IProfileFB {
-  _json: IUser;
-}
-interface IUser {
-  id: string;
-  name: string;
-  picture: {
-    data: {
-      height: number;
-      is_silhouetter: boolean;
-      url: string;
-      width: number;
-    };
-  };
-}
-
-interface IProfileGoogle {
-  id: string;
-  displayName: string;
-  name: Name;
-  photos: Photo[];
-  provider: string;
-}
-
-interface Name {
-  familyName: string;
-  givenName: string;
-}
-
-interface Photo {
-  value: string;
-}
-
 dotenv.config();
 
 const CLIENT_URL =
