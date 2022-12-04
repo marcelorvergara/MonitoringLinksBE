@@ -5,7 +5,7 @@ async function getUrlMonitorsByUser(user_id: string) {
   const conn = await connect();
   try {
     const res = await conn.query(
-      "SELECT us.urlstatus_id, u.url, u.user_id, u.url_id, us.status, us.load_time, us.created_at FROM urls u INNER JOIN urlStatus us ON u.url_id = us.url_id where u.user_id = $1 ORDER BY us.urlstatus_id DESC LIMIT 15",
+      "SELECT us.urlstatus_id, u.url, u.user_id, u.url_id, us.status, us.load_time, us.created_at, u.warning_th, u.danger_th FROM urls u INNER JOIN urlStatus us ON u.url_id = us.url_id where u.user_id = $1 ORDER BY us.urlstatus_id DESC LIMIT 15",
       [user_id]
     );
     return res.rows;

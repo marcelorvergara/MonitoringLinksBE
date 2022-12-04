@@ -6,8 +6,8 @@ async function createUrlMonitor(url: IUrl) {
   try {
     const now = new Date();
     const sql =
-      "INSERT INTO urls (url, user_id, created_at) VALUES ($1, $2, $3) RETURNING *";
-    const values = [url.url, url.user_id, now];
+      "INSERT INTO urls (url, user_id, created_at, warning_th, danger_th) VALUES ($1, $2, $3, $4, $5) RETURNING *";
+    const values = [url.url, url.user_id, now, url.warning_th, url.danger_th];
     const res = await conn.query(sql, values);
     return res.rows[0];
   } catch (err) {
@@ -20,7 +20,7 @@ async function createUrlMonitor(url: IUrl) {
 async function getUrlMonitors() {
   const conn = await connect();
   try {
-    const res = await conn.query("Select * from urls ");
+    const res = await conn.query("Select * from urls");
     return res.rows;
   } catch (err) {
     throw err;
@@ -32,7 +32,10 @@ async function getUrlMonitors() {
 async function getUrls(id: string) {
   const conn = await connect();
   try {
-    const res = await conn.query("Select * from urls where user_id = $1", [id]);
+    const res = await conn.query(
+      "Select * from urls where user_id = $1 order by url_id",
+      [id]
+    );
     return res.rows;
   } catch (err) {
     throw err;
@@ -61,9 +64,25 @@ async function deleteUrl(id: string) {
   }
 }
 
+async function updateUrl(url: IUrl) {
+  const conn = await connect();
+  try {
+    const sql =
+      "UPDATE urls SET warning_th = $1, danger_th = $2 WHERE user_id = $3 AND url_id = $4 RETURNING *";
+    const values = [url.warning_th, url.danger_th, url.user_id, url.url_id];
+    const res = await conn.query(sql, values);
+    return res.rows[0];
+  } catch (err) {
+    throw err;
+  } finally {
+    conn.release();
+  }
+}
+
 export default {
   createUrlMonitor,
   getUrlMonitors,
   getUrls,
   deleteUrl,
+  updateUrl,
 };

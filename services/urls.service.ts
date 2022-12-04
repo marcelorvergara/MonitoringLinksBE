@@ -24,9 +24,14 @@ async function deleteUrl(id: string) {
   return await UrlsRepository.deleteUrl(id);
 }
 
+async function updateUrl(url: IUrl) {
+  return await UrlsRepository.updateUrl(url);
+}
+
 export default {
   createUrlMonitor,
   getUrlMonitors,
   getUrls,
   deleteUrl,
+  updateUrl,
 };
