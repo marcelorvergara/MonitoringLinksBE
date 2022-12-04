@@ -9,8 +9,10 @@ async function createUrlMonitor(
 ) {
   try {
     let url: IUrl = req.body;
-    if (!url.url || !url.user_id) {
-      throw new Error("Url and user Id must be provided!");
+    if (!url.url || !url.user_id || !url.warning_th || !url.danger_th) {
+      throw new Error(
+        "Url, warning threshold, danger threshold and user Id must be provided!"
+      );
     }
     res.status(201).send(await UrlsService.createUrlMonitor(url));
     logger.info(`POST /urls - ${JSON.stringify(url)}`);
@@ -38,8 +40,23 @@ async function deleteUrl(req: Request, res: Response, next: NextFunction) {
   }
 }
 
+async function updateUrl(req: Request, res: Response, next: NextFunction) {
+  try {
+    let url: IUrl = req.body;
+    if (!url.url_id || !url.user_id || !url.warning_th || !url.danger_th) {
+      throw new Error(
+        "Id, user Id, warning threshold and danger threshold must be provided!"
+      );
+    }
+    res.status(202).send(await UrlsService.updateUrl(url));
+  } catch (err) {
+    next(err);
+  }
+}
+
 export default {
   createUrlMonitor,
   getUrls,
   deleteUrl,
+  updateUrl,
 };

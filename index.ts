@@ -51,7 +51,7 @@ app.use(
   cookieSession({
     name: "session",
     keys: [process.env.SESS_KEY!],
-    maxAge: 24 * 60 * 60 * 100,
+    maxAge: 24 * 60 * 60 * 10000,
   })
 );
 
