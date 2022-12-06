@@ -44,7 +44,7 @@ async function getUrls(id: string) {
   }
 }
 
-async function deleteUrl(id: string) {
+async function deleteUrl(id: string, user: IUser) {
   const conn = await connect();
   try {
     // first delete status for this url
@@ -53,8 +53,8 @@ async function deleteUrl(id: string) {
       [id]
     );
     const res = await conn.query(
-      "Delete from urls where url_id = $1 RETURNING *",
-      [id]
+      "Delete from urls where url_id = $1 and user_id = $2 RETURNING *",
+      [id, user.id]
     );
     return res.rows;
   } catch (err) {
