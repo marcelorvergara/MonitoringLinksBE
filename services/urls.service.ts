@@ -20,8 +20,8 @@ async function getUrls(id: string) {
   return await UrlsRepository.getUrls(id);
 }
 
-async function deleteUrl(id: string) {
-  return await UrlsRepository.deleteUrl(id);
+async function deleteUrl(id: string, user: IUser) {
+  return await UrlsRepository.deleteUrl(id, user);
 }
 
 async function updateUrl(url: IUrl) {
