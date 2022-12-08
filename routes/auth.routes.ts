@@ -23,8 +23,6 @@ router.get("/login/success", async (req, res) => {
       cookies: req.cookies,
       totUrls: urls.length,
     });
-  } else {
-    res.status(400).send("Not authenticated :-(");
   }
 });
 
@@ -39,7 +37,11 @@ router.get("/login/failed", (_req, res) => {
 // When logout, redirect to client
 router.get("/logout", function (req, res, next) {
   try {
-    res.cookie("session", "none", {
+    res.cookie("monitlinksession", "none", {
+      expires: new Date(Date.now() + 4 * 1000),
+      httpOnly: true,
+    });
+    res.cookie("monitlinksession.sig", "none", {
       expires: new Date(Date.now() + 4 * 1000),
       httpOnly: true,
     });
