@@ -23,6 +23,8 @@ router.get("/login/success", async (req, res) => {
       cookies: req.cookies,
       totUrls: urls.length,
     });
+  } else {
+    res.status(401).send("Not authenticated :-(");
   }
 });
 
