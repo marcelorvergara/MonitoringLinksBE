@@ -49,9 +49,9 @@ app.use(
 
 app.use(
   cookieSession({
-    name: "session",
+    name: "monitlinksession",
     keys: [process.env.SESS_KEY!],
-    maxAge: 24 * 60 * 60 * 10000,
+    maxAge: 24 * 60 * 60 * 1000,
   })
 );
 
