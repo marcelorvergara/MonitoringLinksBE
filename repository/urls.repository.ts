@@ -6,8 +6,15 @@ async function createUrlMonitor(url: IUrl) {
   try {
     const now = new Date();
     const sql =
-      "INSERT INTO urls (url, user_id, created_at, warning_th, danger_th) VALUES ($1, $2, $3, $4, $5) RETURNING *";
-    const values = [url.url, url.user_id, now, url.warning_th, url.danger_th];
+      "INSERT INTO urls (url, user_id, created_at, warning_th, danger_th, whatsapp) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *";
+    const values = [
+      url.url,
+      url.user_id,
+      now,
+      url.warning_th,
+      url.danger_th,
+      url.whatsapp,
+    ];
     const res = await conn.query(sql, values);
     return res.rows[0];
   } catch (err) {

@@ -1,8 +1,9 @@
 import UrlsService from "../services/urls.service";
 import axios from "axios";
-import UrlStatusRepository from "../repository/urlStatus.repository";
 import { IUrlStatus } from "../interfaces/IUrlStatus";
 import { IUrl } from "../interfaces/IUrl";
+import { treatAlarm, treatErrorAlarm } from "../helpers/helpers";
+import UrlStatusRepository from "../repository/urlStatus.repository";
 
 async function checkUrlSvc() {
   const urlsToMonitor = await UrlsService.getUrlMonitors();
@@ -15,6 +16,15 @@ async function checkUrlSvc() {
         const statusCode = response.status;
         const endTime = new Date().getTime() / 1000;
         const elapsedTime = endTime - startTime;
+        if (urlObj.whatsapp) {
+          treatAlarm(
+            elapsedTime,
+            urlObj.warning_th,
+            urlObj.danger_th,
+            urlObj.whatsapp,
+            urlObj.url
+          );
+        }
         results.push({
           status: statusCode,
           load_time: Math.round((elapsedTime + Number.EPSILON) * 100) / 100,
@@ -26,6 +36,9 @@ async function checkUrlSvc() {
         const statusCode = err.response.status;
         const endTime = new Date().getTime() / 1000;
         const elapsedTime = endTime - startTime;
+        if (urlObj.whatsapp) {
+          treatErrorAlarm(elapsedTime, urlObj.whatsapp, urlObj.url, statusCode);
+        }
         results.push({
           status: statusCode,
           load_time: Math.round((elapsedTime + Number.EPSILON) * 100) / 100,
