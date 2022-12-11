@@ -40,11 +40,11 @@ router.get("/login/failed", (_req, res) => {
 router.get("/logout", function (req, res, next) {
   try {
     res.cookie("monitlinksession", "none", {
-      expires: new Date(Date.now() + 4 * 1000),
+      expires: new Date(Date.now() + 4 * 3000),
       httpOnly: true,
     });
     res.cookie("monitlinksession.sig", "none", {
-      expires: new Date(Date.now() + 4 * 1000),
+      expires: new Date(Date.now() + 4 * 4500),
       httpOnly: true,
     });
     res

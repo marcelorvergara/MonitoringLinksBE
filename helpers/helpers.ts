@@ -2,6 +2,14 @@ import axios from "axios";
 import { IUrl } from "../interfaces/IUrl";
 import UrlStatusRepository from "../repository/urlStatus.repository";
 import UrlsService from "../repository/urls.repository";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const WP_URL =
+  process.env.ENV_ARG === "DEV"
+    ? process.env.WP_URL_DEV
+    : process.env.WP_URL_PRD;
 
 export async function testUrl(url: IUrl) {
   try {
@@ -39,4 +47,58 @@ export async function testUrl(url: IUrl) {
   } catch (err) {
     return { error: "Invalid URL or firewall block rule" };
   }
+}
+
+export async function treatAlarm(
+  elapsedTime: number,
+  warning_th: string,
+  danger_th: string,
+  whatsapp: string,
+  url: string
+) {
+  if (
+    elapsedTime > parseFloat(warning_th) &&
+    elapsedTime < parseFloat(danger_th)
+  ) {
+    axios
+      .post(WP_URL + "/messages", {
+        number: whatsapp,
+        message: `${url} in warning state with load time of ${elapsedTime}`,
+      })
+      .then(function (response) {
+        if (response.status === 201) {
+          logger.info("Warning alert sent to " + whatsapp);
+        }
+      })
+      .catch(function (error) {
+        logger.error(error);
+      });
+  }
+  if (elapsedTime > parseFloat(danger_th)) {
+    axios
+      .post(WP_URL + "/messages", {
+        number: whatsapp,
+        message: `${url} in danger state with load time of ${elapsedTime}`,
+      })
+      .then(function (response) {
+        if (response.status === 201) {
+          logger.info("Danger alert sent to " + whatsapp);
+        }
+      })
+      .catch(function (error) {
+        logger.error(error);
+      });
+  }
+}
+
+export async function treatErrorAlarm(
+  elapsedTime: number,
+  whatsapp: string,
+  url: string,
+  statusCode: number
+) {
+  axios.prototype(WP_URL + "/message", {
+    number: whatsapp,
+    message: `ERROR ALERT - ${url} is failing with status code ${statusCode} and elapsed time ${elapsedTime}`,
+  });
 }
