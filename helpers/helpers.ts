@@ -65,7 +65,7 @@ export async function treatAlarm(
         number: whatsapp,
         message: `${url} in warning state with load time of ${elapsedTime.toFixed(
           2
-        )}s.`,
+        )}s. \nVisit https://ml.mvergara.net and check your monitor.`,
       })
       .then(function (response) {
         if (response.status === 201) {
@@ -82,7 +82,7 @@ export async function treatAlarm(
         number: whatsapp,
         message: `${url} in danger state with load time of ${elapsedTime.toFixed(
           2
-        )}s.`,
+        )}s. \nVisit https://ml.mvergara.net and check your monitor.`,
       })
       .then(function (response) {
         if (response.status === 201) {
