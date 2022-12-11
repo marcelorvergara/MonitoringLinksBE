@@ -63,7 +63,9 @@ export async function treatAlarm(
     axios
       .post(WP_URL + "/messages", {
         number: whatsapp,
-        message: `${url} in warning state with load time of ${elapsedTime}`,
+        message: `${url} in warning state with load time of ${elapsedTime.toFixed(
+          2
+        )}s.`,
       })
       .then(function (response) {
         if (response.status === 201) {
@@ -78,7 +80,9 @@ export async function treatAlarm(
     axios
       .post(WP_URL + "/messages", {
         number: whatsapp,
-        message: `${url} in danger state with load time of ${elapsedTime}`,
+        message: `${url} in danger state with load time of ${elapsedTime.toFixed(
+          2
+        )}s.`,
       })
       .then(function (response) {
         if (response.status === 201) {
