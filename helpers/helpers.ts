@@ -53,7 +53,7 @@ export async function treatAlarm(
   elapsedTime: number,
   warning_th: string,
   danger_th: string,
-  whatsapp: string,
+  sms_whatsapp: string,
   url: string
 ) {
   if (
@@ -62,14 +62,14 @@ export async function treatAlarm(
   ) {
     axios
       .post(WP_URL + "/messages", {
-        number: whatsapp,
+        number: sms_whatsapp,
         message: `${url} in warning state with load time of ${elapsedTime.toFixed(
           2
-        )}s. \nVisit https://ml.mvergara.net and check your monitor.`,
+        )}s. \nVisit monitoringlinks.com and check your monitor`,
       })
       .then(function (response) {
         if (response.status === 201) {
-          logger.info("Warning alert sent to " + whatsapp);
+          logger.info("Warning alert sent to " + sms_whatsapp);
         }
       })
       .catch(function (error) {
@@ -79,14 +79,14 @@ export async function treatAlarm(
   if (elapsedTime > parseFloat(danger_th)) {
     axios
       .post(WP_URL + "/messages", {
-        number: whatsapp,
+        number: sms_whatsapp,
         message: `${url} in danger state with load time of ${elapsedTime.toFixed(
           2
-        )}s. \nVisit https://ml.mvergara.net and check your monitor.`,
+        )}s. \nVisit monitoringlinks.com and check your monitor`,
       })
       .then(function (response) {
         if (response.status === 201) {
-          logger.info("Danger alert sent to " + whatsapp);
+          logger.info("Danger alert sent to " + sms_whatsapp);
         }
       })
       .catch(function (error) {
@@ -97,12 +97,12 @@ export async function treatAlarm(
 
 export async function treatErrorAlarm(
   elapsedTime: number,
-  whatsapp: string,
+  sms_whatsapp: string,
   url: string,
   statusCode: number
 ) {
   axios.prototype(WP_URL + "/message", {
-    number: whatsapp,
+    number: sms_whatsapp,
     message: `ERROR ALERT - ${url} is failing with status code ${statusCode} and elapsed time ${elapsedTime}`,
   });
 }

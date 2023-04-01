@@ -6,14 +6,14 @@ async function createUrlMonitor(url: IUrl) {
   try {
     const now = new Date();
     const sql =
-      "INSERT INTO urls (url, user_id, created_at, warning_th, danger_th, whatsapp) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *";
+      "INSERT INTO urls (url, user_id, created_at, warning_th, danger_th, sms_whatsapp) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *";
     const values = [
       url.url,
       url.user_id,
       now,
       url.warning_th,
       url.danger_th,
-      url.whatsapp,
+      url.sms_whatsapp,
     ];
     const res = await conn.query(sql, values);
     return res.rows[0];
@@ -75,13 +75,13 @@ async function updateUrl(url: IUrl) {
   const conn = await connect();
   try {
     const sql =
-      "UPDATE urls SET warning_th = $1, danger_th = $2, whatsapp = $5 WHERE user_id = $3 AND url_id = $4 RETURNING *";
+      "UPDATE urls SET warning_th = $1, danger_th = $2, sms_whatsapp = $5 WHERE user_id = $3 AND url_id = $4 RETURNING *";
     const values = [
       url.warning_th,
       url.danger_th,
       url.user_id,
       url.url_id,
-      url.whatsapp,
+      url.sms_whatsapp,
     ];
     const res = await conn.query(sql, values);
     return res.rows[0];

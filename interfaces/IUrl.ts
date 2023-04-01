@@ -5,5 +5,5 @@ export interface IUrl {
   created_at?: Date;
   warning_th: string;
   danger_th: string;
-  whatsapp?: string;
+  sms_whatsapp?: string;
 }

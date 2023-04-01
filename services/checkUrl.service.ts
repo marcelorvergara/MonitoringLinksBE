@@ -16,12 +16,12 @@ async function checkUrlSvc() {
         const statusCode = response.status;
         const endTime = new Date().getTime() / 1000;
         const elapsedTime = endTime - startTime;
-        if (urlObj.whatsapp) {
+        if (urlObj.sms_whatsapp) {
           treatAlarm(
             elapsedTime,
             urlObj.warning_th,
             urlObj.danger_th,
-            urlObj.whatsapp,
+            urlObj.sms_whatsapp,
             urlObj.url
           );
         }
@@ -36,8 +36,13 @@ async function checkUrlSvc() {
         const statusCode = err.response.status;
         const endTime = new Date().getTime() / 1000;
         const elapsedTime = endTime - startTime;
-        if (urlObj.whatsapp) {
-          treatErrorAlarm(elapsedTime, urlObj.whatsapp, urlObj.url, statusCode);
+        if (urlObj.sms_whatsapp) {
+          treatErrorAlarm(
+            elapsedTime,
+            urlObj.sms_whatsapp,
+            urlObj.url,
+            statusCode
+          );
         }
         results.push({
           status: statusCode,
