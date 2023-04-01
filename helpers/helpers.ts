@@ -63,9 +63,14 @@ export async function treatAlarm(
     axios
       .post(WP_URL + "/messages", {
         number: sms_whatsapp,
-        message: `${url} in warning state with load time of ${elapsedTime.toFixed(
+        message: `${url
+          .replace("https://", "")
+          .replace(
+            "http://",
+            ""
+          )} in warning state with load time of ${elapsedTime.toFixed(
           2
-        )}s. \nVisit monitoringlinks.com and check your monitor`,
+        )}s. \nVisit Monitoring Links and check your monitor`,
       })
       .then(function (response) {
         if (response.status === 201) {
@@ -80,9 +85,14 @@ export async function treatAlarm(
     axios
       .post(WP_URL + "/messages", {
         number: sms_whatsapp,
-        message: `${url} in danger state with load time of ${elapsedTime.toFixed(
+        message: `${url
+          .replace("https://", "")
+          .replace(
+            "http://",
+            ""
+          )} in danger state with load time of ${elapsedTime.toFixed(
           2
-        )}s. \nVisit monitoringlinks.com and check your monitor`,
+        )}s. \nVisit Monitoring Links and check your monitor`,
       })
       .then(function (response) {
         if (response.status === 201) {
