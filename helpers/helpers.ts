@@ -68,9 +68,9 @@ export async function treatAlarm(
           .replace(
             "http://",
             ""
-          )} in warning state with load time of ${elapsedTime.toFixed(
+          )} is in warning state with load time of ${elapsedTime.toFixed(
           2
-        )}s. \nVisit your dashboard and check your monitor.`,
+        )}s.\nVisit your dashboard and check your monitor.`,
       })
       .then(function (response) {
         if (response.status === 201) {
@@ -90,9 +90,9 @@ export async function treatAlarm(
           .replace(
             "http://",
             ""
-          )} in danger state with load time of ${elapsedTime.toFixed(
+          )} is in danger state with load time of ${elapsedTime.toFixed(
           2
-        )}s. \nVisit your dashboard and check your monitor.`,
+        )}s.\nVisit your dashboard and check your monitor.`,
       })
       .then(function (response) {
         if (response.status === 201) {
