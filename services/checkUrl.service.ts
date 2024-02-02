@@ -8,34 +8,39 @@ import UrlStatusRepository from "../repository/urlStatus.repository";
 async function checkUrlSvc() {
   const urlsToMonitor = await UrlsService.getUrlMonitors();
   const results: IUrlStatus[] = [];
-  urlsToMonitor.forEach(async (urlObj: IUrl) => {
+
+  for (const urlObj of urlsToMonitor) {
     const startTime = new Date().getTime() / 1000;
-    await axios
-      .get(urlObj.url, { headers: { "User-Agent": "Mozilla/5.0" } })
-      .then((response) => {
-        const statusCode = response.status;
-        const endTime = new Date().getTime() / 1000;
-        const elapsedTime = endTime - startTime;
-        if (urlObj.sms_whatsapp) {
-          treatAlarm(
-            elapsedTime,
-            urlObj.warning_th,
-            urlObj.danger_th,
-            urlObj.sms_whatsapp,
-            urlObj.url
-          );
-        }
-        results.push({
-          status: statusCode,
-          load_time: Math.round((elapsedTime + Number.EPSILON) * 100) / 100,
-          url_id: urlObj.url_id,
-        });
-      })
-      .catch((err) => {
-        logger.error("ERROR", err.response);
+
+    try {
+      const response = await axios.get(urlObj.url, {
+        headers: { "User-Agent": "Mozilla/5.0" },
+      });
+      const statusCode = response.status;
+      const endTime = new Date().getTime() / 1000;
+      const elapsedTime = endTime - startTime;
+
+      if (urlObj.sms_whatsapp) {
+        treatAlarm(
+          elapsedTime,
+          urlObj.warning_th,
+          urlObj.danger_th,
+          urlObj.sms_whatsapp,
+          urlObj.url
+        );
+      }
+
+      results.push({
+        status: statusCode,
+        load_time: Math.round((elapsedTime + Number.EPSILON) * 100) / 100,
+        url_id: urlObj.url_id,
+      });
+    } catch (err: any) {
+      if (err.response) {
         const statusCode = err.response.status;
         const endTime = new Date().getTime() / 1000;
         const elapsedTime = endTime - startTime;
+
         if (urlObj.sms_whatsapp) {
           treatErrorAlarm(
             elapsedTime,
@@ -44,16 +49,25 @@ async function checkUrlSvc() {
             statusCode
           );
         }
+
         results.push({
           status: statusCode,
           load_time: Math.round((elapsedTime + Number.EPSILON) * 100) / 100,
           url_id: urlObj.url_id,
         });
-      });
-    if (results.length === urlsToMonitor.length) {
-      await UrlStatusRepository.insertUrlStatus(results);
+      } else {
+        console.error("Unhandled error:", err);
+
+        results.push({
+          status: 408, // Request timeout
+          load_time: 0,
+          url_id: urlObj.url_id,
+        });
+      }
     }
-  });
+  }
+
+  await UrlStatusRepository.insertUrlStatus(results);
 }
 
 export default {
